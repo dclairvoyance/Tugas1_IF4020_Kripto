@@ -82,6 +82,12 @@ const Vigenere = () => {
   const handleFileInputChange = (event) => {
     const file = event.target.files[0];
     setFileInputName(file.name);
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      setUserInput(e.target.result);
+    };
+    reader.readAsText(file);
   };
 
   const handleFileOutputChange = (fileNameInput) => {
