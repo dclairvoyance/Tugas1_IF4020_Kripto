@@ -5,13 +5,14 @@ class HillController < ApplicationController
 
   def encrypt
     user_input = params[:userInput].to_s.upcase.gsub(/\s+/, '')
-    cipher_matrix_input = params[:cipherMatrix].to_s.split(' ').map(&:to_i).each_slice(3).to_a
+    size = params[:size].to_i
+    cipher_matrix_input = params[:cipherMatrix].to_s.split(' ').map(&:to_i).each_slice(size).to_a
     cipher_matrix = Matrix[*cipher_matrix_input]
     message = ""
-    padding_length = (3 - (user_input.length % 3)) % 3
+    padding_length = (size - (user_input.length % size)) % size
     input_padded = user_input + 'Z' * padding_length
   
-    input_padded.each_char.each_slice(3) do |slice|
+    input_padded.each_char.each_slice(size) do |slice|
       numeric_slice = slice.map { |char| char.ord - 'A'.ord }
       input_matrix = Matrix.column_vector(numeric_slice)
       calc_matrix = cipher_matrix * input_matrix
@@ -25,14 +26,15 @@ class HillController < ApplicationController
   
   def decrypt
     user_input = params[:userInput].to_s.upcase.gsub(/\s+/, '')
-    cipher_matrix_input = params[:cipherMatrix].to_s.split(' ').map(&:to_i).each_slice(3).to_a
+    size = params[:size].to_i
+    cipher_matrix_input = params[:cipherMatrix].to_s.split(' ').map(&:to_i).each_slice(size).to_a
     cipher_matrix = Matrix[*cipher_matrix_input]
     cipher_matrix_processed = matrix_mod_inverse(cipher_matrix)
     message = ""
-    padding_length = (3 - (user_input.length % 3)) % 3
+    padding_length = (size - (user_input.length % size)) % size
     input_padded = user_input + 'Z' * padding_length
   
-    input_padded.each_char.each_slice(3) do |slice|
+    input_padded.each_char.each_slice(size) do |slice|
       numeric_slice = slice.map { |char| char.ord - 'A'.ord }
       input_matrix = Matrix.column_vector(numeric_slice)
       calc_matrix = cipher_matrix_processed * input_matrix
