@@ -29,7 +29,7 @@ const Sidebar = () => {
         </Link>
 
         {/* list of pages */}
-        <Link to="/Vigenere">
+        <Link to="/vigenere">
           <SidebarItem
             icon={<MdDoubleArrow size="32" />}
             title="Vigenere"

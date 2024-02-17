@@ -129,7 +129,7 @@ const Hill = () => {
             <div className="flex mb-2">
               <p className="ml-1 text-sm font-semibold text-left">Key size: </p>
               <input
-                className="ml-1 text-sm text-center w-8"
+                className="ml-1 text-sm text-center w-8 rounded-md border-r border-b"
                 type="number"
                 min="2"
                 value={keySizeInput}
