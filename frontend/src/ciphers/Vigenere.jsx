@@ -5,6 +5,7 @@ import {
   MdFileDownload,
   MdFileUpload,
 } from "react-icons/md";
+import Subpage from "../components/Subpage";
 
 const Vigenere = () => {
   const [variant, setVariant] = useState("standard");
@@ -87,62 +88,18 @@ const Vigenere = () => {
     <>
       <div className="p-2 bg-primary_1 rounded-md">
         {/* variant picker */}
-        <div className="flex justify-center border-b border-primary_2 mb-2">
-          <button
-            className={`${
-              variant === "standard"
-                ? "text-secondary border-b-secondary"
-                : "text-white"
-            } mx-1 p-1 rounded-md`}
-            onClick={() => handleVariant("standard")}
-          >
-            Standard
-          </button>
-          <button
-            className={`${
-              variant === "autokey"
-                ? "text-secondary border-b-secondary"
-                : "text-white"
-            } mx-1 p-1 rounded-md`}
-            onClick={() => handleVariant("autokey")}
-          >
-            Autokey
-          </button>
-          <button
-            className={`${
-              variant === "extended"
-                ? "text-secondary border-b-secondary"
-                : "text-white"
-            } mx-1 p-1 rounded-md`}
-            onClick={() => handleVariant("extended")}
-          >
-            Extended
-          </button>
-        </div>
+        <Subpage
+          currentVariable={variant}
+          handleVariable={handleVariant}
+          variables={["standard", "autokey", "extended"]}
+        />
 
         {/* format picker */}
-        <div className="flex justify-center border-b border-primary_2 mb-3">
-          <button
-            className={`${
-              format === "text"
-                ? "text-secondary border-b-secondary"
-                : "text-white"
-            } mx-1 p-1 rounded-md`}
-            onClick={() => handleFormat("text")}
-          >
-            Text
-          </button>
-          <button
-            className={`${
-              format === "file"
-                ? "text-secondary border-b-secondary"
-                : "text-white"
-            } mx-1 p-1 rounded-md`}
-            onClick={() => handleFormat("file")}
-          >
-            File
-          </button>
-        </div>
+        <Subpage
+          currentVariable={format}
+          handleVariable={handleFormat}
+          variables={["text", "file"]}
+        />
 
         {/* input/output */}
         <div className="flex">

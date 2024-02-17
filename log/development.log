@@ -115,3 +115,21 @@ Processing by VigenereController#encrypt as */*
 Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 401)
 
 
+Started POST "/hill_encrypt" for ::1 at 2024-02-17 22:12:19 +0700
+Processing by HillController#encrypt as */*
+  Parameters: {"userInput"=>"adw", "userKey"=>"", "cipherMatrix"=>"2 2 4 3", "size"=>2, "hill"=>{"userInput"=>"adw", "userKey"=>"", "cipherMatrix"=>"2 2 4 3", "size"=>2}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 276)
+
+
+Started POST "/hill_encrypt" for ::1 at 2024-02-17 22:18:49 +0700
+Processing by HillController#encrypt as */*
+  Parameters: {"userInput"=>"adw", "userKey"=>"", "cipherMatrix"=>"2 2 4 3", "size"=>2, "hill"=>{"userInput"=>"adw", "userKey"=>"", "cipherMatrix"=>"2 2 4 3", "size"=>2}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 176)
+
+
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-17 22:56:07 +0700
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"wda", "userKey"=>"awdaw", "vigenere"=>{"userInput"=>"wda", "userKey"=>"awdaw"}}
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+

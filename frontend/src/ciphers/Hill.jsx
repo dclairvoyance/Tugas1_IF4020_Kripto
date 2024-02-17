@@ -15,36 +15,42 @@ const Hill = () => {
   const [userKey, setUserKey] = useState("");
   const [userOutput, setUserOutput] = useState("");
 
-    // Initialize or update matrix size
-    const handleSizeChange = (e) => {
-      const newSize = parseInt(e.target.value);
-      setSize(newSize);
-      setMatrix(Array.from({ length: newSize }, () => Array.from({ length: newSize }, () => 0)));
-    };
-  
-    // Update matrix data
-    const handleMatrixChange = (row, col, value) => {
-      const newMatrix = matrix.map((r, i) => r.map((c, j) => (i === row && j === col ? value : c)));
-      setMatrix(newMatrix);
-    };
+  // Initialize or update matrix size
+  const handleSizeChange = (e) => {
+    const newSize = parseInt(e.target.value);
+    setSize(newSize);
+    setMatrix(
+      Array.from({ length: newSize }, () =>
+        Array.from({ length: newSize }, () => 0)
+      )
+    );
+  };
 
-    const hillEncryptMessage = async () => {
-      try {
-        var cipherMatrix = matrix.flat().join(' ');
-        const response = await fetch('http://localhost:3001/hill_encrypt', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ userInput, userKey, cipherMatrix, size }),
-        });
-        const data = await response.json();
-        setUserOutput(data.message);
-      } catch (error) {
-        console.error('Error:', error);
-        setUserOutput('Error encrypting message.');
-      }
-    };
+  // Update matrix data
+  const handleMatrixChange = (row, col, value) => {
+    const newMatrix = matrix.map((r, i) =>
+      r.map((c, j) => (i === row && j === col ? value : c))
+    );
+    setMatrix(newMatrix);
+  };
+
+  const hillEncryptMessage = async () => {
+    try {
+      var cipherMatrix = matrix.flat().join(" ");
+      const response = await fetch("http://localhost:3001/hill_encrypt", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ userInput, userKey, cipherMatrix, size }),
+      });
+      const data = await response.json();
+      setUserOutput(data.message);
+    } catch (error) {
+      console.error("Error: ", error);
+      setUserOutput("Error encrypting message.");
+    }
+  };
 
   return (
     <>
@@ -128,7 +134,10 @@ const Hill = () => {
           </div>
 
           <div className="lg:flex">
-            <button onClick={hillEncryptMessage} className="bg-primary_2 hover:bg-primary_3 border-primary_3 text-secondary px-2 py-1.5 my-1 lg:mr-1 rounded flex items-center mx-auto">
+            <button
+              onClick={hillEncryptMessage}
+              className="bg-primary_2 hover:bg-primary_3 border-primary_3 text-secondary px-2 py-1.5 my-1 lg:mr-1 rounded flex items-center mx-auto"
+            >
               <MdLockOutline size="16" />
               <span className="text-sm">Encrypt</span>
             </button>
@@ -158,12 +167,7 @@ const Hill = () => {
       </div>
       <div>
         <label>Matrix Size: </label>
-        <input
-          type="number"
-          value={size}
-          onChange={handleSizeChange}
-          min="2"
-        />
+        <input type="number" value={size} onChange={handleSizeChange} min="2" />
         <form>
           {matrix.map((row, rowIndex) => (
             <div key={rowIndex}>
@@ -172,7 +176,13 @@ const Hill = () => {
                   key={`${rowIndex}-${colIndex}`}
                   type="number"
                   value={matrix[rowIndex][colIndex]}
-                  onChange={(e) => handleMatrixChange(rowIndex, colIndex, parseInt(e.target.value))}
+                  onChange={(e) =>
+                    handleMatrixChange(
+                      rowIndex,
+                      colIndex,
+                      parseInt(e.target.value)
+                    )
+                  }
                 />
               ))}
               <br />

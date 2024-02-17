@@ -1,13 +1,13 @@
 import "./App.css";
 import Sidebar from "./components/Sidebar";
 import { Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
-import Vigenere from "./components/Vigenere";
-import Playfair from "./components/Playfair";
-import Affine from "./components/Affine";
-import Hill from "./components/Hill";
-import Superencrypt from "./components/Superencrypt";
-import Enigma from "./components/Enigma";
+import Home from "./pages/Home";
+import Vigenere from "./ciphers/Vigenere";
+import Playfair from "./ciphers/Playfair";
+import Affine from "./ciphers/Affine";
+import Hill from "./ciphers/Hill";
+import Superencrypt from "./ciphers/Superencrypt";
+import Enigma from "./ciphers/Enigma";
 
 function App() {
   return (
