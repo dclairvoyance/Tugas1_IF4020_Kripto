@@ -163,3 +163,53 @@ Processing by VigenereController#encrypt as */*
 Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 114)
 
 
+Started POST "/hill_encrypt" for ::1 at 2024-02-18 00:54:40 +0700
+Processing by HillController#encrypt as */*
+  Parameters: {"userInput"=>"awd", "userKey"=>"", "keyMatrix"=>"1 213 12 1 1 1 2 1 2", "keySize"=>3, "hill"=>{"userInput"=>"awd", "userKey"=>"", "keyMatrix"=>"1 213 12 1 1 1 2 1 2", "keySize"=>3}}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 133)
+
+
+  
+ArgumentError (invalid slice size):
+  
+app/controllers/hill_controller.rb:9:in `each_slice'
+app/controllers/hill_controller.rb:9:in `encrypt'
+Started POST "/hill_encrypt" for ::1 at 2024-02-18 00:56:29 +0700
+Processing by HillController#encrypt as */*
+  Parameters: {"userInput"=>"paymoremoney", "keyMatrix"=>"17 17 5 21 18 21 2 2 19", "keySize"=>3, "hill"=>{"userInput"=>"paymoremoney", "keyMatrix"=>"17 17 5 21 18 21 2 2 19", "keySize"=>3}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 101)
+
+
+  
+ArgumentError (invalid slice size):
+  
+app/controllers/hill_controller.rb:9:in `each_slice'
+app/controllers/hill_controller.rb:9:in `encrypt'
+Started POST "/hill_encrypt" for ::1 at 2024-02-18 00:56:40 +0700
+Processing by HillController#encrypt as */*
+  Parameters: {"userInput"=>"paymoremoney", "keyMatrix"=>"17 17 5 21 18 21 2 2 19", "keySize"=>3, "hill"=>{"userInput"=>"paymoremoney", "keyMatrix"=>"17 17 5 21 18 21 2 2 19", "keySize"=>3}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 101)
+
+
+  
+ArgumentError (invalid slice size):
+  
+app/controllers/hill_controller.rb:9:in `each_slice'
+app/controllers/hill_controller.rb:9:in `encrypt'
+Started POST "/hill_encrypt" for ::1 at 2024-02-18 00:58:00 +0700
+Processing by HillController#encrypt as */*
+  Parameters: {"userInput"=>"paymoremoney", "userKey"=>"", "keyMatrix"=>"17 17 5 21 18 21 2 2 19", "keySize"=>3, "hill"=>{"userInput"=>"paymoremoney", "userKey"=>"", "keyMatrix"=>"17 17 5 21 18 21 2 2 19", "keySize"=>3}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 101)
+
+
+  
+ArgumentError (invalid slice size):
+  
+app/controllers/hill_controller.rb:9:in `each_slice'
+app/controllers/hill_controller.rb:9:in `encrypt'
+Started POST "/hill_encrypt" for ::1 at 2024-02-18 01:01:52 +0700
+Processing by HillController#encrypt as */*
+  Parameters: {"userInput"=>"paymoremoney", "cipherMatrix"=>"17 17 5 21 18 21 2 2 19", "size"=>3, "hill"=>{"userInput"=>"paymoremoney", "cipherMatrix"=>"17 17 5 21 18 21 2 2 19", "size"=>3}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 297)
+
+

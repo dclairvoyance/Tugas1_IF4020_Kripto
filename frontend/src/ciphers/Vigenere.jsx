@@ -11,10 +11,15 @@ const Vigenere = () => {
   const [fileInputName, setFileInputName] = useState("");
   const [fileOutputName, setFileOutputName] = useState("");
   const [userInput, setUserInput] = useState("");
-  const [userKey, setUserKey] = useState("");
   const [userOutput, setUserOutput] = useState("");
   const outputTextArea = useRef(null);
 
+  /* specific Vigenere: key */
+  const [userKey, setUserKey] = useState("");
+
+  {
+    /* encryption/decryption */
+  }
   const encryptAction = async () => {
     if (variant === "standard") {
       await vigenereEncryptMessage();
@@ -61,6 +66,9 @@ const Vigenere = () => {
     }
   };
 
+  {
+    /* templates */
+  }
   const handleVariant = (variant) => {
     setVariant(variant);
   };
