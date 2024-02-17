@@ -1,17 +1,15 @@
 import { useState, useRef } from "react";
-import {
-  MdLockOutline,
-  MdLockOpen,
-  MdFileDownload,
-  MdFileUpload,
-} from "react-icons/md";
+import { MdLockOutline, MdLockOpen } from "react-icons/md";
 import Subpage from "../components/Subpage";
+import TextInput from "../components/TextInput";
+import FileInput from "../components/FileInput";
+import FileOutput from "../components/FileOutput";
 
 const Vigenere = () => {
   const [variant, setVariant] = useState("standard");
   const [format, setFormat] = useState("text");
-  const [fileName, setFileName] = useState("");
-  const [downloadFileName, setDownloadFileName] = useState("");
+  const [fileInputName, setFileInputName] = useState("");
+  const [fileOutputName, setFileOutputName] = useState("");
   const [userInput, setUserInput] = useState("");
   const [userKey, setUserKey] = useState("");
   const [userOutput, setUserOutput] = useState("");
@@ -69,17 +67,26 @@ const Vigenere = () => {
   const handleFormat = (format) => {
     setFormat(format);
   };
-  const handleFileChange = (event) => {
-    const file = event.target.files[0];
-    setFileName(file.name);
+
+  const handleUserInput = (textInput) => {
+    setUserInput(textInput);
   };
-  const handleDownloadFile = () => {
+  const handleFileInputChange = (event) => {
+    const file = event.target.files[0];
+    setFileInputName(file.name);
+  };
+
+  const handleFileOutputChange = (fileNameInput) => {
+    setFileOutputName(fileNameInput);
+  };
+
+  const handleFileOutputSubmit = () => {
     const element = document.createElement("a");
     const file = new Blob([outputTextArea.current.value], {
       type: "text/plain",
     });
     element.href = URL.createObjectURL(file);
-    element.download = downloadFileName;
+    element.download = fileOutputName ? fileOutputName : "encrypted";
     document.body.appendChild(element); // Firefox
     element.click();
   };
@@ -110,50 +117,15 @@ const Vigenere = () => {
             </h2>
             {/* text input */}
             {format === "text" && (
-              <textarea
-                id="input"
-                rows="10"
-                className="w-full p-2 text-sm bg-primary_2 rounded-md border border-primary_3 focus:ring-blue-50"
-                placeholder="Write plaintext here..."
-                value={userInput}
-                onChange={(e) => setUserInput(e.target.value)}
-              ></textarea>
+              <TextInput handleOnChangeParent={handleUserInput} />
             )}
 
             {/* file input */}
             {format === "file" && (
-              <div className="flex-col">
-                <label
-                  htmlFor="upload-file"
-                  className="flex mb-1.5 w-full h-[200px] border-2 border-gray-400 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
-                >
-                  <div className="flex-col w-full my-auto">
-                    <MdFileUpload
-                      className="mx-auto mb-1"
-                      size="32"
-                      color="#9CA3AF"
-                    />
-                    <p className="text-sm text-gray-400">
-                      Click here to upload file...
-                    </p>
-                    <p className="text-xs text-gray-400">(txt format)</p>
-                  </div>
-                  <input
-                    id="upload-file"
-                    type="file"
-                    className="hidden"
-                    onChange={handleFileChange}
-                  />
-                </label>
-                <div className="flex">
-                  <p className="ml-1 text-xs font-bold text-left">
-                    File name:{" "}
-                  </p>
-                  <p className="ml-1 text-xs break-all text-left">
-                    {fileName ? fileName : "No file uploaded..."}
-                  </p>
-                </div>
-              </div>
+              <FileInput
+                handleOnChangeParent={handleFileInputChange}
+                fileName={fileInputName}
+              />
             )}
           </div>
 
@@ -195,21 +167,10 @@ const Vigenere = () => {
                 Output
               </h2>
               {/* download as txt file */}
-              <div className="flex mt-1 md:mt-0">
-                <input
-                  type="text"
-                  id="file-name"
-                  onChange={(e) => setDownloadFileName(e.target.value)}
-                  className="md:w-32 w-full p-1.5 rounded-s-md bg-primary_2 border-y border-l border-primary_3 focus:ring-blue-50 text-xs"
-                  placeholder="File Name"
-                />
-                <button
-                  onClick={handleDownloadFile}
-                  className="p-1.5 rounded-e-md rounded-none bg-primary_3 border border-primary_3"
-                >
-                  <MdFileDownload />
-                </button>
-              </div>
+              <FileOutput
+                handleOnChangeParent={handleFileOutputChange}
+                handleOnSubmitParent={handleFileOutputSubmit}
+              />
             </div>
             <textarea
               readOnly
