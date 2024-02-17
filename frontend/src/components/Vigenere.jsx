@@ -6,7 +6,7 @@ import {
   MdFileUpload,
 } from "react-icons/md";
 
-const Viginere = () => {
+const Vigenere = () => {
   const [variant, setVariant] = useState("standard");
   const [format, setFormat] = useState("text");
   const [fileName, setFileName] = useState("");
@@ -22,35 +22,41 @@ const Viginere = () => {
 
   const vigenereEncryptMessage = async () => {
     try {
-      const response = await fetch('http://localhost:3001/vigenere_encrypt', {
-        method: 'POST',
+      const response = await fetch("http://localhost:3001/vigenere_encrypt", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ userInput, userKey }),
       });
       const data = await response.json();
       setUserOutput(data.message);
     } catch (error) {
-      console.error('Error:', error);
-      setUserOutput('Error encrypting message.');
+      console.error("Error: ", error);
+      setUserOutput("Error encrypting message.");
+    }
+  };
+
+  const decryptAction = async () => {
+    if (variant === "standard") {
+      await vigenereDecryptMessage();
     }
   };
 
   const vigenereDecryptMessage = async () => {
     try {
-      const response = await fetch('http://localhost:3001/vigenere_decrypt', {
-        method: 'POST',
+      const response = await fetch("http://localhost:3001/vigenere_decrypt", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({ userInput, userKey }),
       });
       const data = await response.json();
-      setMessage('Decrypted: ' + data.message);
+      setUserOutput(data.message);
     } catch (error) {
-      console.error('Error:', error);
-      setMessage('Error decrypting message.');
+      console.error("Error: ", error);
+      setUserOutput("Error decrypting message.");
     }
   };
 
@@ -192,11 +198,17 @@ const Viginere = () => {
               onChange={(e) => setUserKey(e.target.value)}
             ></textarea>
             <div className="lg:flex">
-              <button onClick={encryptAction} className="bg-primary_2 hover:bg-primary_3 border-primary_3 text-secondary px-2 py-1.5 my-1 lg:mr-1 rounded flex items-center mx-auto">
+              <button
+                onClick={encryptAction}
+                className="bg-primary_2 hover:bg-primary_3 border-primary_3 text-secondary px-2 py-1.5 my-1 lg:mr-1 rounded flex items-center mx-auto"
+              >
                 <MdLockOutline size="16" />
                 <span className="text-sm">Encrypt</span>
               </button>
-              <button className="bg-primary_2 hover:bg-primary_3 border-primary_3 text-secondary px-2 py-1.5 my-1 lg:ml-1 rounded flex items-center mx-auto">
+              <button
+                onClick={decryptAction}
+                className="bg-primary_2 hover:bg-primary_3 border-primary_3 text-secondary px-2 py-1.5 my-1 lg:ml-1 rounded flex items-center mx-auto"
+              >
                 <MdLockOpen size="16" />
                 <span className="text-sm">Decrypt</span>
               </button>
@@ -225,4 +237,4 @@ const Viginere = () => {
   );
 };
 
-export default Viginere;
+export default Vigenere;

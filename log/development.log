@@ -1,0 +1,21 @@
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-17 20:07:48 +0700
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"awd", "userKey"=>"awd", "vigenere"=>{"userInput"=>"awd", "userKey"=>"awd"}}
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 3616)
+
+
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-17 20:18:52 +0700
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"awd", "userKey"=>"awd", "vigenere"=>{"userInput"=>"awd", "userKey"=>"awd"}}
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 103)
+
+
+Started POST "/vigenere_decrypt" for ::1 at 2024-02-17 20:20:14 +0700
+Processing by VigenereController#decrypt as */*
+  Parameters: {"userInput"=>"ASG", "userKey"=>"awd", "vigenere"=>{"userInput"=>"ASG", "userKey"=>"awd"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+

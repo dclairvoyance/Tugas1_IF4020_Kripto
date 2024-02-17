@@ -8,6 +8,7 @@ import {
   MdKeyboard,
 } from "react-icons/md";
 import { Link, useLocation } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const Sidebar = () => {
   const location = useLocation();
@@ -28,11 +29,11 @@ const Sidebar = () => {
         </Link>
 
         {/* list of pages */}
-        <Link to="/viginere">
+        <Link to="/Vigenere">
           <SidebarItem
             icon={<MdDoubleArrow size="32" />}
-            title="Viginere"
-            isActive={isActivePage("/viginere")}
+            title="Vigenere"
+            isActive={isActivePage("/vigenere")}
           ></SidebarItem>
         </Link>
         <Link to="/playfair">
@@ -91,6 +92,12 @@ const SidebarItem = ({ icon, title, isActive }) => {
       <div>{isActive}</div>
     </div>
   );
+};
+
+SidebarItem.propTypes = {
+  icon: PropTypes.element.isRequired,
+  title: PropTypes.string.isRequired,
+  isActive: PropTypes.bool.isRequired,
 };
 
 export default Sidebar;
