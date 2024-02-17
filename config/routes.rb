@@ -12,4 +12,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  Rails.application.routes.draw do
+    post '/vigenere_encrypt', to: 'vigenere#encrypt'
+    post '/vigenere_decrypt', to: 'vigenere#decrypt'
+    post '/vigenere_auto_encrypt', to: 'vigenere#auto_encrypt'
+    post '/vigenere_auto_decrypt', to: 'vigenere#auto_decrypt'
+    post '/affine_encrypt', to: 'affine#encrypt'
+    post '/affine_decrypt', to: 'affine#decrypt'
+    post '/hill_encrypt', to: 'hill#encrypt'
+    post '/hill_decrypt', to: 'hill#decrypt'
+  end
 end
