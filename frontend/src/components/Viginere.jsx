@@ -10,6 +10,49 @@ const Viginere = () => {
   const [variant, setVariant] = useState("standard");
   const [format, setFormat] = useState("text");
   const [fileName, setFileName] = useState("");
+  const [userInput, setUserInput] = useState("");
+  const [userKey, setUserKey] = useState("");
+  const [userOutput, setUserOutput] = useState("");
+
+  const encryptAction = async () => {
+    if (variant === "standard") {
+      await vigenereEncryptMessage();
+    }
+  };
+
+  const vigenereEncryptMessage = async () => {
+    try {
+      const response = await fetch('http://localhost:3001/vigenere_encrypt', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userInput, userKey }),
+      });
+      const data = await response.json();
+      setUserOutput(data.message);
+    } catch (error) {
+      console.error('Error:', error);
+      setUserOutput('Error encrypting message.');
+    }
+  };
+
+  const vigenereDecryptMessage = async () => {
+    try {
+      const response = await fetch('http://localhost:3001/vigenere_decrypt', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userInput, userKey }),
+      });
+      const data = await response.json();
+      setMessage('Decrypted: ' + data.message);
+    } catch (error) {
+      console.error('Error:', error);
+      setMessage('Error decrypting message.');
+    }
+  };
 
   const handleVariant = (variant) => {
     setVariant(variant);
@@ -95,6 +138,8 @@ const Viginere = () => {
                 rows="10"
                 className="w-full p-2 text-sm bg-primary_2 rounded-md border border-primary_3 focus:ring-blue-50"
                 placeholder="Write plaintext here..."
+                value={userInput}
+                onChange={(e) => setUserInput(e.target.value)}
               ></textarea>
             )}
 
@@ -143,9 +188,11 @@ const Viginere = () => {
               rows="5"
               className="w-full p-2 text-sm bg-primary_2 rounded-md border border-primary_3 focus:ring-blue-50"
               placeholder="Write key here..."
+              value={userKey}
+              onChange={(e) => setUserKey(e.target.value)}
             ></textarea>
             <div className="lg:flex">
-              <button className="bg-primary_2 hover:bg-primary_3 border-primary_3 text-secondary px-2 py-1.5 my-1 lg:mr-1 rounded flex items-center mx-auto">
+              <button onClick={encryptAction} className="bg-primary_2 hover:bg-primary_3 border-primary_3 text-secondary px-2 py-1.5 my-1 lg:mr-1 rounded flex items-center mx-auto">
                 <MdLockOutline size="16" />
                 <span className="text-sm">Encrypt</span>
               </button>
@@ -165,6 +212,7 @@ const Viginere = () => {
                 id="output"
                 rows="10"
                 className="w-full p-2 text-sm bg-primary_2 rounded-md border border-primary_3"
+                value={userOutput}
               ></textarea>
               <button className="absolute right-2 top-2 rounded-md p-1">
                 <MdFileDownload size="20" />
