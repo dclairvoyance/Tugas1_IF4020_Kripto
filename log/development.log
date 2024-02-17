@@ -19,3 +19,99 @@ Processing by VigenereController#decrypt as */*
 Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 100)
 
 
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-17 20:26:40 +0700
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"awd", "userKey"=>"awd", "vigenere"=>{"userInput"=>"awd", "userKey"=>"awd"}}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 102)
+
+
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-17 20:26:47 +0700
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"awd", "userKey"=>"awd", "vigenere"=>{"userInput"=>"awd", "userKey"=>"awd"}}
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 102)
+
+
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-17 20:26:47 +0700
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"awd", "userKey"=>"awd", "vigenere"=>{"userInput"=>"awd", "userKey"=>"awd"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-17 20:26:47 +0700
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"awd", "userKey"=>"awd", "vigenere"=>{"userInput"=>"awd", "userKey"=>"awd"}}
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-17 20:26:48 +0700
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"awd", "userKey"=>"awd", "vigenere"=>{"userInput"=>"awd", "userKey"=>"awd"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-17 20:26:50 +0700
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"awd", "userKey"=>"awd", "vigenere"=>{"userInput"=>"awd", "userKey"=>"awd"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-17 20:26:51 +0700
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"awd", "userKey"=>"awd", "vigenere"=>{"userInput"=>"awd", "userKey"=>"awd"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-17 20:26:51 +0700
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"awd", "userKey"=>"awd", "vigenere"=>{"userInput"=>"awd", "userKey"=>"awd"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-17 20:27:24 +0700
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"ad", "userKey"=>"awdaw", "vigenere"=>{"userInput"=>"ad", "userKey"=>"awdaw"}}
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 93)
+
+
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-17 20:28:26 +0700
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"adawkdjbnakwdubawodbauwdboauwdbaouwdbaouwdbaouwdbawdawd", "userKey"=>"awdaw", "vigenere"=>{"userInput"=>"adawkdjbnakwdubawodbauwdboauwdbaouwdbaouwdbaouwdbawdawd", "userKey"=>"awdaw"}}
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 464)
+
+
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-17 21:10:01 +0700
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"awd", "userKey"=>"awd", "vigenere"=>{"userInput"=>"awd", "userKey"=>"awd"}}
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 101)
+
+
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-17 21:13:27 +0700
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"adw", "userKey"=>"awdwad", "vigenere"=>{"userInput"=>"adw", "userKey"=>"awdwad"}}
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 100)
+
+
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-17 21:16:51 +0700
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"awdaw", "userKey"=>"awdawd", "vigenere"=>{"userInput"=>"awdaw", "userKey"=>"awdawd"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 115)
+
+
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-17 21:17:36 +0700
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"awdawawduaiwdubaiwdvaiwduvaiwd", "userKey"=>"awdawdiybiyvadw", "vigenere"=>{"userInput"=>"awdawawduaiwdubaiwdvaiwduvaiwd", "userKey"=>"awdawdiybiyvadw"}}
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 289)
+
+
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-17 21:17:38 +0700
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"awdawawduaiwdubaawdihaiwdawdaiwdvaiwduvaiwd", "userKey"=>"awdawdiybiyvadw", "vigenere"=>{"userInput"=>"awdawawduaiwdubaawdihaiwdawdaiwdvaiwduvaiwd", "userKey"=>"awdawdiybiyvadw"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 380)
+
+
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-17 21:17:39 +0700
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"awdawawduaiwdubaawdihaiwdawdaiwdvaiwduvaiwdadw", "userKey"=>"awdawdiybiyvadw", "vigenere"=>{"userInput"=>"awdawawduaiwdubaawdihaiwdawdaiwdvaiwduvaiwdadw", "userKey"=>"awdawdiybiyvadw"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 401)
+
+

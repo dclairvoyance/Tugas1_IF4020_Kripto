@@ -19,7 +19,7 @@ const Sidebar = () => {
 
   return (
     <aside className="h-screen">
-      <nav className="h-full w-20 md:w-32 flex flex-col bg-primary_1 text-secondary shadow-md">
+      <nav className="h-full w-24 md:w-32 flex flex-col bg-primary_1 text-secondary shadow-md">
         {/* web title */}
         <Link to="/">
           <div className="flex mt-2 justify-center h-16 items-center">
@@ -84,7 +84,7 @@ const SidebarItem = ({ icon, title, isActive }) => {
     <div
       className={`${
         isActive ? "bg-primary_3" : "bg-primary_2"
-      } rounded-md flex flex-col items-center justify-center h-20 w-16 md:w-28 my-1 mx-auto shadow-md 
+      } rounded-md flex flex-col items-center justify-center h-20 w-20 md:w-28 my-1 mx-auto shadow-md 
     text-secondary hover:bg-primary_3 hover:cursor-pointer`}
     >
       <div className="">{icon}</div>

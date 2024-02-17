@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {
   MdLockOutline,
   MdLockOpen,
@@ -10,9 +10,11 @@ const Vigenere = () => {
   const [variant, setVariant] = useState("standard");
   const [format, setFormat] = useState("text");
   const [fileName, setFileName] = useState("");
+  const [downloadFileName, setDownloadFileName] = useState("");
   const [userInput, setUserInput] = useState("");
   const [userKey, setUserKey] = useState("");
   const [userOutput, setUserOutput] = useState("");
+  const outputTextArea = useRef(null);
 
   const encryptAction = async () => {
     if (variant === "standard") {
@@ -69,6 +71,16 @@ const Vigenere = () => {
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     setFileName(file.name);
+  };
+  const handleDownloadFile = () => {
+    const element = document.createElement("a");
+    const file = new Blob([outputTextArea.current.value], {
+      type: "text/plain",
+    });
+    element.href = URL.createObjectURL(file);
+    element.download = downloadFileName;
+    document.body.appendChild(element); // Firefox
+    element.click();
   };
 
   return (
@@ -136,7 +148,9 @@ const Vigenere = () => {
         <div className="flex">
           {/* input */}
           <div className="basis-5/12 flex-col mx-1">
-            <h2 className="ml-1 mb-1 flex text-md font-semibold">Input</h2>
+            <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold">
+              Input
+            </h2>
             {/* text input */}
             {format === "text" && (
               <textarea
@@ -188,7 +202,9 @@ const Vigenere = () => {
 
           {/* key */}
           <div className="basis-2/12 flex-col mx-1">
-            <h2 className="ml-1 mb-1 flex text-md font-semibold">Key</h2>
+            <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold">
+              Key
+            </h2>
             <textarea
               id="key"
               rows="5"
@@ -217,19 +233,35 @@ const Vigenere = () => {
 
           {/* output */}
           <div className="basis-5/12 flex-col mx-1">
-            <h2 className="ml-1 mb-1 flex text-md font-semibold">Output</h2>
-            <div className="relative">
-              <textarea
-                readOnly
-                id="output"
-                rows="10"
-                className="w-full p-2 text-sm bg-primary_2 rounded-md border border-primary_3"
-                value={userOutput}
-              ></textarea>
-              <button className="absolute right-2 top-2 rounded-md p-1">
-                <MdFileDownload size="20" />
-              </button>
+            <div className="md:flex md:justify-between mb-1">
+              <h2 className="h-8 items-center ml-1 flex text-md font-semibold">
+                Output
+              </h2>
+              {/* download as txt file */}
+              <div className="flex mt-1 md:mt-0">
+                <input
+                  type="text"
+                  id="file-name"
+                  onChange={(e) => setDownloadFileName(e.target.value)}
+                  className="md:w-32 w-full p-1.5 rounded-s-md bg-primary_2 border-y border-l border-primary_3 focus:ring-blue-50 text-xs"
+                  placeholder="File Name"
+                />
+                <button
+                  onClick={handleDownloadFile}
+                  className="p-1.5 rounded-e-md rounded-none bg-primary_3 border border-primary_3"
+                >
+                  <MdFileDownload />
+                </button>
+              </div>
             </div>
+            <textarea
+              readOnly
+              id="output"
+              ref={outputTextArea}
+              rows="10"
+              className="w-full p-2 text-sm bg-primary_2 rounded-md border border-primary_3"
+              value={userOutput}
+            ></textarea>
           </div>
         </div>
       </div>
