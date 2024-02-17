@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="flex w-screen">
       <Sidebar></Sidebar>
-      <div className="w-full p-4 flex flex-col justify-center bg-primary_2">
+      <div className="w-full p-4 flex flex-col justify-center bg-background">
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="viginere" element={<Viginere />}></Route>
