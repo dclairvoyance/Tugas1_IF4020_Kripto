@@ -2,7 +2,7 @@ class AffineController < ApplicationController
   # skip_before_action :verify_authenticity_token
   
   def encrypt
-    user_input = params[:userInput].to_s.upcase.gsub(/\s+/, '')
+    user_input = params[:userInput].to_s.upcase.gsub(/[^A-Z]/, '')
     a_coef = params[:aCoef].to_i
     b_coef = params[:bCoef].to_i
     message = ""
@@ -16,7 +16,7 @@ class AffineController < ApplicationController
   end
   
   def decrypt
-    user_input = params[:userInput].to_s.upcase.gsub(/\s+/, '')
+    user_input = params[:userInput].to_s.upcase.gsub(/[^A-Z]/, '')
     a_coef = params[:aCoef].to_i
     b_coef = params[:bCoef].to_i
     message = ""

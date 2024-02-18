@@ -4,7 +4,7 @@ class HillController < ApplicationController
   # skip_before_action :verify_authenticity_token
 
   def encrypt
-    user_input = params[:userInput].to_s.upcase.gsub(/\s+/, '')
+    user_input = params[:userInput].to_s.upcase.gsub(/[^A-Z]/, '')
     size = params[:size].to_i
     cipher_matrix_input = params[:cipherMatrix].to_s.split(' ').map(&:to_i).each_slice(size).to_a
     cipher_matrix = Matrix[*cipher_matrix_input]
@@ -25,7 +25,7 @@ class HillController < ApplicationController
   end
   
   def decrypt
-    user_input = params[:userInput].to_s.upcase.gsub(/\s+/, '')
+    user_input = params[:userInput].to_s.upcase.gsub(/[^A-Z]/, '')
     size = params[:size].to_i
     cipher_matrix_input = params[:cipherMatrix].to_s.split(' ').map(&:to_i).each_slice(size).to_a
     cipher_matrix = Matrix[*cipher_matrix_input]
