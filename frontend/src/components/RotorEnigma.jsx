@@ -15,14 +15,14 @@ const RotorEnigma = ({ index, rotorSettings, handleOnChangeParent }) => {
 
   return (
     <div className="w-full bg-primary_2 rounded-md mr-1">
-      <div className="flex justify-center">
+      <div className="flex justify-center cursor-pointer">
         <MdKeyboardArrowUp
           color="#9ca3af"
           onClick={() => handleRotorChange(-1)}
         />
       </div>
       <div className="text-gray-400">{rotorSettings}</div>
-      <div className="flex justify-center">
+      <div className="flex justify-center cursor-pointer">
         <MdKeyboardArrowDown
           color="#9ca3af"
           onClick={() => handleRotorChange(1)}
@@ -33,6 +33,7 @@ const RotorEnigma = ({ index, rotorSettings, handleOnChangeParent }) => {
 };
 
 RotorEnigma.propTypes = {
+  index: PropTypes.number,
   rotorSettings: PropTypes.string,
   handleOnChangeParent: PropTypes.func.isRequired,
 };
