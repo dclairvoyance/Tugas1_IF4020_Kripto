@@ -5,8 +5,9 @@ class EnigmaController < ApplicationController
         user_input = params[:userInput].to_s.upcase.gsub(/[^A-Z]/, '')
         user_key = params[:userKey].to_s.upcase.gsub(/[^A-Z]/, '')
         
-        rotors = set_settings[:rotors]
-        reflector = set_settings[:reflector]
+        settings = set_settings(user_key)
+        rotors = settings[:rotors]
+        reflector = settings[:reflector]
 
         message = ""
         user_input.each_char do |char|
@@ -39,11 +40,11 @@ class EnigmaController < ApplicationController
     ROTOR3 = "EGCJRMHOYLZQUFPATIBVNKWDSX"
     ROTOR4 = "CGMERKHFZTLOSQJPWAUVNBXDIY"
 
-    def set_settings
-        rotor1 = set_rotor_wiring(ROTOR1)
-        rotor2 = set_rotor_wiring(ROTOR2)
-        rotor3 = set_rotor_wiring(ROTOR3)
-        rotor4 = set_rotor_wiring(ROTOR4)
+    def set_settings(keys)
+        rotor1 = set_rotor_wiring(ROTOR1.chars.rotate(keys[0].ord - 'A'.ord + 1).join)
+        rotor2 = set_rotor_wiring(ROTOR2.chars.rotate(keys[1].ord - 'A'.ord + 1).join)
+        rotor3 = set_rotor_wiring(ROTOR3.chars.rotate(keys[2].ord - 'A'.ord + 1).join)
+        rotor4 = set_rotor_wiring(ROTOR4.chars.rotate(keys[3].ord - 'A'.ord + 1).join)
         rotors = [rotor1, rotor2, rotor3, rotor4]
         reflector = set_reflector_wiring
         {rotors: rotors, reflector: reflector}
