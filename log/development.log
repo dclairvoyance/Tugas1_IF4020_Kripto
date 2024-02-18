@@ -219,3 +219,9 @@ Processing by VigenereController#encrypt as */*
 Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 106)
 
 
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-18 02:14:10 +0700
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"", "userKey"=>"", "vigenere"=>{"userInput"=>"", "userKey"=>""}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 78)
+
+
