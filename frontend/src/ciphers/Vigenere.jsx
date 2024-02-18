@@ -87,7 +87,11 @@ const Vigenere = () => {
     reader.onload = (e) => {
       setUserInput(e.target.result);
     };
-    reader.readAsText(file);
+    if (variant === "extended") {
+      reader.readAsDataURL(file);
+    } else {
+      reader.readAsText(file);
+    }
   };
 
   const handleFileOutputChange = (fileNameInput) => {
