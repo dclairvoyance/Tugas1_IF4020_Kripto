@@ -1836,3 +1836,1464 @@ Processing by EnigmaController#encrypt as */*
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
 
 
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:33:32 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"P", "userKey"=>"E N G M"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:33:33 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E N G N", "enigma"=>{"userInput"=>"P", "userKey"=>"E N G N"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:33:33 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E N G O", "enigma"=>{"userInput"=>"P", "userKey"=>"E N G O"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:33:33 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E N G P", "enigma"=>{"userInput"=>"P", "userKey"=>"E N G P"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:33:33 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E N G Q", "enigma"=>{"userInput"=>"P", "userKey"=>"E N G Q"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:33:33 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E N G R", "enigma"=>{"userInput"=>"P", "userKey"=>"E N G R"}}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:33:34 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E N G S", "enigma"=>{"userInput"=>"P", "userKey"=>"E N G S"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:33:34 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E N G T", "enigma"=>{"userInput"=>"P", "userKey"=>"E N G T"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 524)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:33:34 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E N G U", "enigma"=>{"userInput"=>"P", "userKey"=>"E N G U"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:33:34 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E N G V", "enigma"=>{"userInput"=>"P", "userKey"=>"E N G V"}}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:33:34 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E N G W", "enigma"=>{"userInput"=>"P", "userKey"=>"E N G W"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:33:34 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E N G X", "enigma"=>{"userInput"=>"P", "userKey"=>"E N G X"}}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:33:34 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E N G Y", "enigma"=>{"userInput"=>"P", "userKey"=>"E N G Y"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:33:35 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E N G Z", "enigma"=>{"userInput"=>"P", "userKey"=>"E N G Z"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:33:35 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E N H A", "enigma"=>{"userInput"=>"P", "userKey"=>"E N H A"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:33:41 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"P", "userKey"=>"E N G M"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:33:41 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"O", "userKey"=>"E N G N", "enigma"=>{"userInput"=>"O", "userKey"=>"E N G N"}}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:33:41 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"L", "userKey"=>"E N G O", "enigma"=>{"userInput"=>"L", "userKey"=>"E N G O"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:33:46 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"Y", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"Y", "userKey"=>"E N G M"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:33:47 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"K", "userKey"=>"E N G N", "enigma"=>{"userInput"=>"K", "userKey"=>"E N G N"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:33:47 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"U", "userKey"=>"E N G O", "enigma"=>{"userInput"=>"U", "userKey"=>"E N G O"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:00 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"P", "userKey"=>"E N G M"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:01 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"O", "userKey"=>"E N G N", "enigma"=>{"userInput"=>"O", "userKey"=>"E N G N"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 524)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:01 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"L", "userKey"=>"E N G O", "enigma"=>{"userInput"=>"L", "userKey"=>"E N G O"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:06 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E N C M", "enigma"=>{"userInput"=>"P", "userKey"=>"E N C M"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:06 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"O", "userKey"=>"E N C N", "enigma"=>{"userInput"=>"O", "userKey"=>"E N C N"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:07 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"L", "userKey"=>"E N C O", "enigma"=>{"userInput"=>"L", "userKey"=>"E N C O"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:41 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"Z Z Z X", "enigma"=>{"userInput"=>"P", "userKey"=>"Z Z Z X"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:42 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"Z Z Z Y", "enigma"=>{"userInput"=>"P", "userKey"=>"Z Z Z Y"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:43 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"Z Z Z Z", "enigma"=>{"userInput"=>"P", "userKey"=>"Z Z Z Z"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:44 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A A", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A A"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:45 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A B", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A B"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:45 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A C", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A C"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:45 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A D", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A D"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:45 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A E", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A E"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:45 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A F", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A F"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:45 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A G", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A G"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:45 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A H", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A H"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:46 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A I", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A I"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:46 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A J", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A J"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:46 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A K", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A K"}}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:46 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A L", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A L"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:46 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A M", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A M"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 524)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:46 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A N", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A N"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:47 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A O", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A O"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:47 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A P", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A P"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:47 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A Q", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A Q"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:47 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A R", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A R"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:47 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A S", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A S"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:47 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A T", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A T"}}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:48 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A U", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A U"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:48 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A V", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A V"}}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:48 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A W", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A W"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:48 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A X", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A X"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:49 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A Y", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A Y"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:50 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A A Z", "enigma"=>{"userInput"=>"P", "userKey"=>"A A A Z"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:50 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A B A", "enigma"=>{"userInput"=>"P", "userKey"=>"A A B A"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 524)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:51 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A B B", "enigma"=>{"userInput"=>"P", "userKey"=>"A A B B"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:51 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A B C", "enigma"=>{"userInput"=>"P", "userKey"=>"A A B C"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:51 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A B D", "enigma"=>{"userInput"=>"P", "userKey"=>"A A B D"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:51 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A B E", "enigma"=>{"userInput"=>"P", "userKey"=>"A A B E"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:51 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A B F", "enigma"=>{"userInput"=>"P", "userKey"=>"A A B F"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:51 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A B G", "enigma"=>{"userInput"=>"P", "userKey"=>"A A B G"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:51 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A B H", "enigma"=>{"userInput"=>"P", "userKey"=>"A A B H"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:34:52 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"A A B I", "enigma"=>{"userInput"=>"P", "userKey"=>"A A B I"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:51:45 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"T", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"T", "userKey"=>"E N G M"}}
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:51:45 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"Y", "userKey"=>"E N G N", "enigma"=>{"userInput"=>"Y", "userKey"=>"E N G N"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:51:46 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"I", "userKey"=>"E N G O", "enigma"=>{"userInput"=>"I", "userKey"=>"E N G O"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:51:48 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E N G P", "enigma"=>{"userInput"=>"P", "userKey"=>"E N G P"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:51:48 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"L", "userKey"=>"E N G Q", "enigma"=>{"userInput"=>"L", "userKey"=>"E N G Q"}}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:51:48 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"M", "userKey"=>"E N G R", "enigma"=>{"userInput"=>"M", "userKey"=>"E N G R"}}
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:51:49 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"J", "userKey"=>"E N G S", "enigma"=>{"userInput"=>"J", "userKey"=>"E N G S"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:51:49 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"G", "userKey"=>"E N G T", "enigma"=>{"userInput"=>"G", "userKey"=>"E N G T"}}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:51:49 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"V", "userKey"=>"E N G U", "enigma"=>{"userInput"=>"V", "userKey"=>"E N G U"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:51:50 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"J", "userKey"=>"E N G V", "enigma"=>{"userInput"=>"J", "userKey"=>"E N G V"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:51:50 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"V", "userKey"=>"E N G W", "enigma"=>{"userInput"=>"V", "userKey"=>"E N G W"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:51:51 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"V", "userKey"=>"E N G X", "enigma"=>{"userInput"=>"V", "userKey"=>"E N G X"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 524)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:51:51 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"V", "userKey"=>"E N G Y", "enigma"=>{"userInput"=>"V", "userKey"=>"E N G Y"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:51:51 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"V", "userKey"=>"E N G Z", "enigma"=>{"userInput"=>"V", "userKey"=>"E N G Z"}}
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:51:51 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"V", "userKey"=>"E N H A", "enigma"=>{"userInput"=>"V", "userKey"=>"E N H A"}}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:51:52 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"F", "userKey"=>"E N H B", "enigma"=>{"userInput"=>"F", "userKey"=>"E N H B"}}
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:51:52 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"E N H C", "enigma"=>{"userInput"=>"D", "userKey"=>"E N H C"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:51:53 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"R", "userKey"=>"E N H D", "enigma"=>{"userInput"=>"R", "userKey"=>"E N H D"}}
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:51:54 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"T", "userKey"=>"E N H E", "enigma"=>{"userInput"=>"T", "userKey"=>"E N H E"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:51:54 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"F", "userKey"=>"E N H F", "enigma"=>{"userInput"=>"F", "userKey"=>"E N H F"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:00 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"S", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"S", "userKey"=>"E N G M"}}
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:01 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"A", "userKey"=>"E N G N", "enigma"=>{"userInput"=>"A", "userKey"=>"E N G N"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:03 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"S", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"S", "userKey"=>"E N G M"}}
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:03 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"A", "userKey"=>"E N G N", "enigma"=>{"userInput"=>"A", "userKey"=>"E N G N"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:04 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"Y", "userKey"=>"E N G O", "enigma"=>{"userInput"=>"Y", "userKey"=>"E N G O"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:04 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"A", "userKey"=>"E N G P", "enigma"=>{"userInput"=>"A", "userKey"=>"E N G P"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 524)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:08 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"S", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"S", "userKey"=>"E N G M"}}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:08 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"A", "userKey"=>"E N G N", "enigma"=>{"userInput"=>"A", "userKey"=>"E N G N"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:09 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"Y", "userKey"=>"E N G O", "enigma"=>{"userInput"=>"Y", "userKey"=>"E N G O"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:10 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"A", "userKey"=>"E N G P", "enigma"=>{"userInput"=>"A", "userKey"=>"E N G P"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:11 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"T", "userKey"=>"E N G Q", "enigma"=>{"userInput"=>"T", "userKey"=>"E N G Q"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:12 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"O", "userKey"=>"E N G R", "enigma"=>{"userInput"=>"O", "userKey"=>"E N G R"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:12 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"L", "userKey"=>"E N G S", "enigma"=>{"userInput"=>"L", "userKey"=>"E N G S"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:13 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"O", "userKey"=>"E N G T", "enigma"=>{"userInput"=>"O", "userKey"=>"E N G T"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:13 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"L", "userKey"=>"E N G U", "enigma"=>{"userInput"=>"L", "userKey"=>"E N G U"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:35 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"H", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"H", "userKey"=>"E N G M"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:36 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"H", "userKey"=>"E N G N", "enigma"=>{"userInput"=>"H", "userKey"=>"E N G N"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:37 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"E N G O", "enigma"=>{"userInput"=>"D", "userKey"=>"E N G O"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:37 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"E N G P", "enigma"=>{"userInput"=>"D", "userKey"=>"E N G P"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:38 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"U", "userKey"=>"E N G Q", "enigma"=>{"userInput"=>"U", "userKey"=>"E N G Q"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:39 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"W", "userKey"=>"E N G R", "enigma"=>{"userInput"=>"W", "userKey"=>"E N G R"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:39 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"S", "userKey"=>"E N G S", "enigma"=>{"userInput"=>"S", "userKey"=>"E N G S"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:40 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"E", "userKey"=>"E N G T", "enigma"=>{"userInput"=>"E", "userKey"=>"E N G T"}}
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 23:52:41 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"J", "userKey"=>"E N G U", "enigma"=>{"userInput"=>"J", "userKey"=>"E N G U"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:39 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L G V", "enigma"=>{"userInput"=>"P", "userKey"=>"E L G V"}}
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:40 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"O", "userKey"=>"E L G W", "enigma"=>{"userInput"=>"O", "userKey"=>"E L G W"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:41 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L G X", "enigma"=>{"userInput"=>"P", "userKey"=>"E L G X"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 524)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:42 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"O", "userKey"=>"E L G Y", "enigma"=>{"userInput"=>"O", "userKey"=>"E L G Y"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:43 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"N", "userKey"=>"E L G Z", "enigma"=>{"userInput"=>"N", "userKey"=>"E L G Z"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:44 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"J", "userKey"=>"E L H A", "enigma"=>{"userInput"=>"J", "userKey"=>"E L H A"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:45 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"E", "userKey"=>"E L H B", "enigma"=>{"userInput"=>"E", "userKey"=>"E L H B"}}
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:45 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"R", "userKey"=>"E L H C", "enigma"=>{"userInput"=>"R", "userKey"=>"E L H C"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:46 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"O", "userKey"=>"E L H D", "enigma"=>{"userInput"=>"O", "userKey"=>"E L H D"}}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:47 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"K", "userKey"=>"E L H E", "enigma"=>{"userInput"=>"K", "userKey"=>"E L H E"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:47 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L H F", "enigma"=>{"userInput"=>"P", "userKey"=>"E L H F"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:48 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"O", "userKey"=>"E L H G", "enigma"=>{"userInput"=>"O", "userKey"=>"E L H G"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:48 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L H H", "enigma"=>{"userInput"=>"P", "userKey"=>"E L H H"}}
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:49 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"L", "userKey"=>"E L H I", "enigma"=>{"userInput"=>"L", "userKey"=>"E L H I"}}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:49 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"M", "userKey"=>"E L H J", "enigma"=>{"userInput"=>"M", "userKey"=>"E L H J"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:50 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"N", "userKey"=>"E L H K", "enigma"=>{"userInput"=>"N", "userKey"=>"E L H K"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:50 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"H", "userKey"=>"E L H L", "enigma"=>{"userInput"=>"H", "userKey"=>"E L H L"}}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 524)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:50 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"E L H M", "enigma"=>{"userInput"=>"D", "userKey"=>"E L H M"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:52 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"E L H N", "enigma"=>{"userInput"=>"D", "userKey"=>"E L H N"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:52 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"E L H O", "enigma"=>{"userInput"=>"D", "userKey"=>"E L H O"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:52 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"E L H P", "enigma"=>{"userInput"=>"D", "userKey"=>"E L H P"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:53 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"E L H Q", "enigma"=>{"userInput"=>"D", "userKey"=>"E L H Q"}}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:53 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"E L H R", "enigma"=>{"userInput"=>"D", "userKey"=>"E L H R"}}
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:53 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"E L H S", "enigma"=>{"userInput"=>"D", "userKey"=>"E L H S"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:53 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"E L H T", "enigma"=>{"userInput"=>"D", "userKey"=>"E L H T"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:53 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"E L H U", "enigma"=>{"userInput"=>"D", "userKey"=>"E L H U"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:53 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"E L H V", "enigma"=>{"userInput"=>"D", "userKey"=>"E L H V"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:54 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"E L H W", "enigma"=>{"userInput"=>"D", "userKey"=>"E L H W"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:54 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"E L H X", "enigma"=>{"userInput"=>"D", "userKey"=>"E L H X"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:54 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"E L H Y", "enigma"=>{"userInput"=>"D", "userKey"=>"E L H Y"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:54 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"E L H Z", "enigma"=>{"userInput"=>"D", "userKey"=>"E L H Z"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:54 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"E L I A", "enigma"=>{"userInput"=>"D", "userKey"=>"E L I A"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:54 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"E L I B", "enigma"=>{"userInput"=>"D", "userKey"=>"E L I B"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:55 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"E L I C", "enigma"=>{"userInput"=>"D", "userKey"=>"E L I C"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:55 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"E L I D", "enigma"=>{"userInput"=>"D", "userKey"=>"E L I D"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:12:55 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"E L I E", "enigma"=>{"userInput"=>"D", "userKey"=>"E L I E"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:00 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L I F", "enigma"=>{"userInput"=>"P", "userKey"=>"E L I F"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 524)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:00 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L I G", "enigma"=>{"userInput"=>"P", "userKey"=>"E L I G"}}
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:00 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L I H", "enigma"=>{"userInput"=>"P", "userKey"=>"E L I H"}}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:00 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L I I", "enigma"=>{"userInput"=>"P", "userKey"=>"E L I I"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:01 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L I J", "enigma"=>{"userInput"=>"P", "userKey"=>"E L I J"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:01 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L I K", "enigma"=>{"userInput"=>"P", "userKey"=>"E L I K"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:01 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L I L", "enigma"=>{"userInput"=>"P", "userKey"=>"E L I L"}}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:02 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L I M", "enigma"=>{"userInput"=>"P", "userKey"=>"E L I M"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:02 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L I N", "enigma"=>{"userInput"=>"P", "userKey"=>"E L I N"}}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:02 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L I O", "enigma"=>{"userInput"=>"P", "userKey"=>"E L I O"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:02 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L I P", "enigma"=>{"userInput"=>"P", "userKey"=>"E L I P"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:02 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L I Q", "enigma"=>{"userInput"=>"P", "userKey"=>"E L I Q"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:02 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L I R", "enigma"=>{"userInput"=>"P", "userKey"=>"E L I R"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:03 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L I S", "enigma"=>{"userInput"=>"P", "userKey"=>"E L I S"}}
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 524)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:03 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L I T", "enigma"=>{"userInput"=>"P", "userKey"=>"E L I T"}}
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:03 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L I U", "enigma"=>{"userInput"=>"P", "userKey"=>"E L I U"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:03 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L I V", "enigma"=>{"userInput"=>"P", "userKey"=>"E L I V"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:03 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L I W", "enigma"=>{"userInput"=>"P", "userKey"=>"E L I W"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:03 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L I X", "enigma"=>{"userInput"=>"P", "userKey"=>"E L I X"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:04 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L I Y", "enigma"=>{"userInput"=>"P", "userKey"=>"E L I Y"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:04 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L I Z", "enigma"=>{"userInput"=>"P", "userKey"=>"E L I Z"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:04 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L J A", "enigma"=>{"userInput"=>"P", "userKey"=>"E L J A"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:04 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L J B", "enigma"=>{"userInput"=>"P", "userKey"=>"E L J B"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:04 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L J C", "enigma"=>{"userInput"=>"P", "userKey"=>"E L J C"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:04 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"E L J D", "enigma"=>{"userInput"=>"P", "userKey"=>"E L J D"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:05 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"I", "userKey"=>"E L J E", "enigma"=>{"userInput"=>"I", "userKey"=>"E L J E"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:05 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"F", "userKey"=>"E L J F", "enigma"=>{"userInput"=>"F", "userKey"=>"E L J F"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:05 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"F", "userKey"=>"E L J G", "enigma"=>{"userInput"=>"F", "userKey"=>"E L J G"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:05 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"F", "userKey"=>"E L J H", "enigma"=>{"userInput"=>"F", "userKey"=>"E L J H"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:06 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"F", "userKey"=>"E L J I", "enigma"=>{"userInput"=>"F", "userKey"=>"E L J I"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:06 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"F", "userKey"=>"E L J J", "enigma"=>{"userInput"=>"F", "userKey"=>"E L J J"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:06 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"F", "userKey"=>"E L J K", "enigma"=>{"userInput"=>"F", "userKey"=>"E L J K"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:06 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"F", "userKey"=>"E L J L", "enigma"=>{"userInput"=>"F", "userKey"=>"E L J L"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:13:06 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"F", "userKey"=>"E L J M", "enigma"=>{"userInput"=>"F", "userKey"=>"E L J M"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 524)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:08 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"D N G M", "enigma"=>{"userInput"=>"P", "userKey"=>"D N G M"}}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:09 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"J", "userKey"=>"D N G N", "enigma"=>{"userInput"=>"J", "userKey"=>"D N G N"}}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:09 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"J", "userKey"=>"D N G O", "enigma"=>{"userInput"=>"J", "userKey"=>"D N G O"}}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:09 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"L", "userKey"=>"D N G P", "enigma"=>{"userInput"=>"L", "userKey"=>"D N G P"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:10 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"D N G Q", "enigma"=>{"userInput"=>"D", "userKey"=>"D N G Q"}}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:11 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"H", "userKey"=>"D N G R", "enigma"=>{"userInput"=>"H", "userKey"=>"D N G R"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:12 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"H", "userKey"=>"D N G S", "enigma"=>{"userInput"=>"H", "userKey"=>"D N G S"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:12 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"H", "userKey"=>"D N G T", "enigma"=>{"userInput"=>"H", "userKey"=>"D N G T"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:13 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"U", "userKey"=>"D N G U", "enigma"=>{"userInput"=>"U", "userKey"=>"D N G U"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:13 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"Y", "userKey"=>"D N G V", "enigma"=>{"userInput"=>"Y", "userKey"=>"D N G V"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:15 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"T", "userKey"=>"D N G W", "enigma"=>{"userInput"=>"T", "userKey"=>"D N G W"}}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 524)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:15 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"G", "userKey"=>"D N G X", "enigma"=>{"userInput"=>"G", "userKey"=>"D N G X"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:15 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"B", "userKey"=>"D N G Y", "enigma"=>{"userInput"=>"B", "userKey"=>"D N G Y"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:16 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"J", "userKey"=>"D N G Z", "enigma"=>{"userInput"=>"J", "userKey"=>"D N G Z"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:16 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"K", "userKey"=>"D N H A", "enigma"=>{"userInput"=>"K", "userKey"=>"D N H A"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:17 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"M", "userKey"=>"D N H B", "enigma"=>{"userInput"=>"M", "userKey"=>"D N H B"}}
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:17 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"D N H C", "enigma"=>{"userInput"=>"P", "userKey"=>"D N H C"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:18 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"O", "userKey"=>"D N H D", "enigma"=>{"userInput"=>"O", "userKey"=>"D N H D"}}
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:20 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"J", "userKey"=>"D N H E", "enigma"=>{"userInput"=>"J", "userKey"=>"D N H E"}}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:20 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"H", "userKey"=>"D N H F", "enigma"=>{"userInput"=>"H", "userKey"=>"D N H F"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:21 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"G", "userKey"=>"D N H G", "enigma"=>{"userInput"=>"G", "userKey"=>"D N H G"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:21 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"T", "userKey"=>"D N H H", "enigma"=>{"userInput"=>"T", "userKey"=>"D N H H"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:22 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"Y", "userKey"=>"D N H I", "enigma"=>{"userInput"=>"Y", "userKey"=>"D N H I"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:22 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"U", "userKey"=>"D N H J", "enigma"=>{"userInput"=>"U", "userKey"=>"D N H J"}}
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:22 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"I", "userKey"=>"D N H K", "enigma"=>{"userInput"=>"I", "userKey"=>"D N H K"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:23 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"O", "userKey"=>"D N H L", "enigma"=>{"userInput"=>"O", "userKey"=>"D N H L"}}
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:23 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"P", "userKey"=>"D N H M", "enigma"=>{"userInput"=>"P", "userKey"=>"D N H M"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:23 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"M", "userKey"=>"D N H N", "enigma"=>{"userInput"=>"M", "userKey"=>"D N H N"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:24 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"D", "userKey"=>"D N H O", "enigma"=>{"userInput"=>"D", "userKey"=>"D N H O"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:25 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"A", "userKey"=>"D N H P", "enigma"=>{"userInput"=>"A", "userKey"=>"D N H P"}}
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:25 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"W", "userKey"=>"D N H Q", "enigma"=>{"userInput"=>"W", "userKey"=>"D N H Q"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:26 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"X", "userKey"=>"D N H R", "enigma"=>{"userInput"=>"X", "userKey"=>"D N H R"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:26 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"R", "userKey"=>"D N H S", "enigma"=>{"userInput"=>"R", "userKey"=>"D N H S"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:27 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"T", "userKey"=>"D N H T", "enigma"=>{"userInput"=>"T", "userKey"=>"D N H T"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:27 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"C", "userKey"=>"D N H U", "enigma"=>{"userInput"=>"C", "userKey"=>"D N H U"}}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 524)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:28 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"B", "userKey"=>"D N H V", "enigma"=>{"userInput"=>"B", "userKey"=>"D N H V"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:28 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"I", "userKey"=>"D N H W", "enigma"=>{"userInput"=>"I", "userKey"=>"D N H W"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:30 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"J", "userKey"=>"D N H X", "enigma"=>{"userInput"=>"J", "userKey"=>"D N H X"}}
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:30 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"J", "userKey"=>"D N H Y", "enigma"=>{"userInput"=>"J", "userKey"=>"D N H Y"}}
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:30 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"J", "userKey"=>"D N H Z", "enigma"=>{"userInput"=>"J", "userKey"=>"D N H Z"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:31 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"J", "userKey"=>"D N I A", "enigma"=>{"userInput"=>"J", "userKey"=>"D N I A"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:32 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"H", "userKey"=>"D N I B", "enigma"=>{"userInput"=>"H", "userKey"=>"D N I B"}}
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:32 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"H", "userKey"=>"D N I C", "enigma"=>{"userInput"=>"H", "userKey"=>"D N I C"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:32 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"H", "userKey"=>"D N I D", "enigma"=>{"userInput"=>"H", "userKey"=>"D N I D"}}
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-19 00:45:32 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"H", "userKey"=>"D N I E", "enigma"=>{"userInput"=>"H", "userKey"=>"D N I E"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 523)
+
+
+Started POST "/playfair_encrypt" for ::1 at 2024-02-19 01:57:25 +0700
+  
+Zeitwerk::NameError (expected file /Users/dclairvoyance/Documents/ITB/Semester8/IF4020 - Kriptografi/Tugas/Tugas1_IF4020_Kripto/app/controllers/playfair_controller.rb to define constant PlayfairController, but didn't):
+  
+zeitwerk (2.6.13) lib/zeitwerk/loader/callbacks.rb:33:in `on_file_autoloaded'
+zeitwerk (2.6.13) lib/zeitwerk/kernel.rb:27:in `require'
+activesupport (7.1.3) lib/active_support/inflector/methods.rb:290:in `const_get'
+activesupport (7.1.3) lib/active_support/inflector/methods.rb:290:in `constantize'
+activesupport (7.1.3) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (7.1.3) lib/action_dispatch/http/request.rb:90:in `controller_class_for'
+actionpack (7.1.3) lib/action_dispatch/request/utils.rb:100:in `action_encoding_template'
+actionpack (7.1.3) lib/action_dispatch/request/utils.rb:85:in `encode'
+actionpack (7.1.3) lib/action_dispatch/request/utils.rb:45:in `set_binary_encoding'
+actionpack (7.1.3) lib/action_dispatch/http/parameters.rb:68:in `path_parameters='
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:48:in `block in serve'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.9) lib/rack/etag.rb:29:in `call'
+rack (3.0.9) lib/rack/conditional_get.rb:43:in `call'
+rack (3.0.9) lib/rack/head.rb:15:in `call'
+activerecord (7.1.3) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3) lib/rails/rack/logger.rb:24:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+rack-cors (2.0.1) lib/rack/cors.rb:102:in `call'
+railties (7.1.3) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started POST "/playfair_encrypt" for ::1 at 2024-02-19 01:57:37 +0700
+  
+ActionController::RoutingError (uninitialized constant PlayfairController):
+  
+Started POST "/playfair_encrypt" for ::1 at 2024-02-19 01:58:13 +0700
+Processing by PlayfairController#encrypt as */*
+  Parameters: {"userInput"=>"temui ibu nanti malam", "userKey"=>"", "playfair"=>{"userInput"=>"temui ibu nanti malam", "userKey"=>""}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 282)
+
+
+  
+NameError (undefined local variable or method `key_square' for an instance of PlayfairController):
+  
+app/controllers/playfair_controller.rb:65:in `encrypt_pair'
+app/controllers/playfair_controller.rb:43:in `block in encrypt'
+app/controllers/playfair_controller.rb:42:in `each'
+app/controllers/playfair_controller.rb:42:in `encrypt'
+Started POST "/playfair_encrypt" for ::1 at 2024-02-19 01:58:43 +0700
+Processing by PlayfairController#encrypt as */*
+  Parameters: {"userInput"=>"temui ibu nanti malam", "userKey"=>"", "playfair"=>{"userInput"=>"temui ibu nanti malam", "userKey"=>""}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 368)
+
+
+Started POST "/playfair_encrypt" for ::1 at 2024-02-19 01:59:12 +0700
+Processing by PlayfairController#encrypt as */*
+  Parameters: {"userInput"=>"temui ibu nanti malam", "userKey"=>"jalan ganesha sepuluh", "playfair"=>{"userInput"=>"temui ibu nanti malam", "userKey"=>"jalan ganesha sepuluh"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 318)
+
+
+Started POST "/playfair_encrypt" for ::1 at 2024-02-19 02:00:06 +0700
+Processing by PlayfairController#encrypt as */*
+  Parameters: {"userInput"=>"temui ibu nanti malam", "userKey"=>"jalan ganesha sepuluh", "playfair"=>{"userInput"=>"temui ibu nanti malam", "userKey"=>"jalan ganesha sepuluh"}}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 395)
+
+
+Started POST "/playfair_encrypt" for ::1 at 2024-02-19 02:01:13 +0700
+Processing by PlayfairController#encrypt as */*
+  Parameters: {"userInput"=>"temui ibu nanti malam", "userKey"=>"jalan ganesha sepuluh", "playfair"=>{"userInput"=>"temui ibu nanti malam", "userKey"=>"jalan ganesha sepuluh"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 397)
+
+
+Started POST "/playfair_decrypt" for ::1 at 2024-02-19 02:03:47 +0700
+Processing by PlayfairController#decrypt as */*
+  Parameters: {"userInput"=>"ZBRSFYKUPGLGRKVSNLQV", "userKey"=>"jalan ganesha sepuluh", "playfair"=>{"userInput"=>"ZBRSFYKUPGLGRKVSNLQV", "userKey"=>"jalan ganesha sepuluh"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 307)
+
+
+  
+NoMethodError (undefined method `decyrpt_pair' for an instance of PlayfairController):
+  
+app/controllers/playfair_controller.rb:90:in `block in decrypt'
+app/controllers/playfair_controller.rb:89:in `each'
+app/controllers/playfair_controller.rb:89:in `decrypt'
+Started POST "/playfair_decrypt" for ::1 at 2024-02-19 02:04:01 +0700
+Processing by PlayfairController#decrypt as */*
+  Parameters: {"userInput"=>"ZBRSFYKUPGLGRKVSNLQV", "userKey"=>"jalan ganesha sepuluh", "playfair"=>{"userInput"=>"ZBRSFYKUPGLGRKVSNLQV", "userKey"=>"jalan ganesha sepuluh"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 387)
+
+
