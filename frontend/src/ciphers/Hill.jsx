@@ -61,6 +61,16 @@ const Hill = () => {
   const handleFileOutputChange = (fileNameInput) => {
     setFileOutputName(fileNameInput);
   };
+  const handleFileOutputSubmit = () => {
+    const element = document.createElement("a");
+    const file = new Blob([outputTextArea.current.value], {
+      type: "text/plain",
+    });
+    element.href = URL.createObjectURL(file);
+    element.download = fileOutputName ? fileOutputName : "encrypted";
+    document.body.appendChild(element); // Firefox
+    element.click();
+  };
 
   {
     /* specific Hill */
@@ -79,17 +89,6 @@ const Hill = () => {
     setKeyValues(newKeyValues);
   };
 
-  const handleFileOutputSubmit = () => {
-    const element = document.createElement("a");
-    const file = new Blob([outputTextArea.current.value], {
-      type: "text/plain",
-    });
-    element.href = URL.createObjectURL(file);
-    element.download = fileOutputName ? fileOutputName : "encrypted";
-    document.body.appendChild(element); // Firefox
-    element.click();
-  };
-
   return (
     <>
       <div className="p-2 bg-primary_1 rounded-md">
@@ -104,7 +103,7 @@ const Hill = () => {
         <div className="flex">
           {/* input */}
           <div className="basis-5/12 flex-col mx-1">
-            <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold">
+            <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold text-white">
               Input
             </h2>
             {/* text input */}
@@ -123,11 +122,13 @@ const Hill = () => {
 
           {/* key */}
           <div className="basis-2/12 flex-col mx-1">
-            <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold">
+            <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold text-white">
               Key
             </h2>
             <div className="flex mb-2">
-              <p className="ml-1 text-sm font-semibold text-left">Key size: </p>
+              <p className="ml-1 text-sm font-semibold text-left text-white">
+                Key size:{" "}
+              </p>
               <input
                 className="ml-1 text-sm text-center w-8 rounded-md border-r border-b"
                 type="number"
@@ -174,7 +175,7 @@ const Hill = () => {
           {/* output */}
           <div className="basis-5/12 flex-col mx-1">
             <div className="md:flex md:justify-between mb-1">
-              <h2 className="h-8 items-center ml-1 flex text-md font-semibold">
+              <h2 className="h-8 items-center ml-1 flex text-md font-semibold text-white">
                 Output
               </h2>
               {/* download as txt file */}
@@ -188,7 +189,7 @@ const Hill = () => {
               id="output"
               ref={outputTextArea}
               rows="10"
-              className="w-full p-2 text-sm bg-primary_2 rounded-md border border-primary_3"
+              className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
               value={userOutput}
             ></textarea>
           </div>

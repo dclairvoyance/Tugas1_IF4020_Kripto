@@ -225,3 +225,19 @@ Processing by VigenereController#encrypt as */*
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 78)
 
 
+Started POST "/vigenere_decrypt" for ::1 at 2024-02-18 14:16:34 +0700
+Processing by VigenereController#decrypt as */*
+  Parameters: {"userInput"=>"", "userKey"=>"", "vigenere"=>{"userInput"=>"", "userKey"=>""}}
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 80)
+
+
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-18 14:16:34 +0700
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"", "userKey"=>"", "vigenere"=>{"userInput"=>"", "userKey"=>""}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 79)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 15:09:18 +0700
+  
+ActionController::RoutingError (No route matches [POST] "/enigma_encrypt"):
+  

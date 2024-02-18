@@ -97,7 +97,6 @@ const Vigenere = () => {
   const handleFileOutputChange = (fileNameInput) => {
     setFileOutputName(fileNameInput);
   };
-
   const handleFileOutputSubmit = () => {
     const element = document.createElement("a");
     const file = new Blob([outputTextArea.current.value], {
@@ -130,7 +129,7 @@ const Vigenere = () => {
         <div className="flex">
           {/* input */}
           <div className="basis-5/12 flex-col mx-1">
-            <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold">
+            <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold text-white">
               Input
             </h2>
             {/* text input */}
@@ -149,13 +148,13 @@ const Vigenere = () => {
 
           {/* key */}
           <div className="basis-2/12 flex-col mx-1">
-            <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold">
+            <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold text-white">
               Key
             </h2>
             <textarea
               id="key"
               rows="5"
-              className="w-full p-2 text-sm bg-primary_2 rounded-md border border-primary_3 focus:ring-blue-50"
+              className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3 focus:ring-blue-50"
               placeholder="Write key here..."
               value={userKey}
               onChange={(e) => setUserKey(e.target.value)}
@@ -181,7 +180,7 @@ const Vigenere = () => {
           {/* output */}
           <div className="basis-5/12 flex-col mx-1">
             <div className="md:flex md:justify-between mb-1">
-              <h2 className="h-8 items-center ml-1 flex text-md font-semibold">
+              <h2 className="h-8 items-center ml-1 flex text-md font-semibold text-white">
                 Output
               </h2>
               {/* download as txt file */}
@@ -195,7 +194,7 @@ const Vigenere = () => {
               id="output"
               ref={outputTextArea}
               rows="10"
-              className="w-full p-2 text-sm bg-primary_2 rounded-md border border-primary_3"
+              className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
               value={userOutput}
             ></textarea>
           </div>

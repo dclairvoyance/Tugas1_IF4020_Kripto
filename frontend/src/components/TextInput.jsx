@@ -9,7 +9,7 @@ const TextInput = ({ handleOnChangeParent }) => {
     <textarea
       id="input"
       rows="10"
-      className="w-full p-2 text-sm bg-primary_2 rounded-md border border-primary_3 focus:ring-blue-50"
+      className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3 focus:ring-blue-50"
       placeholder="Write plaintext here..."
       onChange={handleOnChange}
     ></textarea>
