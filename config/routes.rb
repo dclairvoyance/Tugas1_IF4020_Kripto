@@ -22,5 +22,7 @@ Rails.application.routes.draw do
     post '/affine_decrypt', to: 'affine#decrypt'
     post '/hill_encrypt', to: 'hill#encrypt'
     post '/hill_decrypt', to: 'hill#decrypt'
+    post '/enigma_encrypt', to: 'enigma#encrypt'
+    post '/enigma_decrypt', to: 'enigma#decrypt'
   end
 end

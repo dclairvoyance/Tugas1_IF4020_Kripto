@@ -241,3 +241,182 @@ Started POST "/enigma_encrypt" for ::1 at 2024-02-18 15:09:18 +0700
   
 ActionController::RoutingError (No route matches [POST] "/enigma_encrypt"):
   
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-18 15:25:15 +0700
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"adwwa", "userKey"=>"awdawd", "vigenere"=>{"userInput"=>"adwwa", "userKey"=>"awdawd"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 183)
+
+
+Started POST "/vigenere_encrypt" for ::1 at 2024-02-18 15:25:24 +0700
+Processing by VigenereController#encrypt as */*
+  Parameters: {"userInput"=>"awdaw", "userKey"=>"adwawd", "vigenere"=>{"userInput"=>"awdaw", "userKey"=>"adwawd"}}
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 109)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 15:25:51 +0700
+  
+ActionController::RoutingError (No route matches [POST] "/enigma_encrypt"):
+  
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 20:09:28 +0700
+  
+ActionController::RoutingError (No route matches [POST] "/enigma_encrypt"):
+  
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 20:09:32 +0700
+  
+ActionController::RoutingError (No route matches [POST] "/enigma_encrypt"):
+  
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 20:10:19 +0700
+  
+SyntaxError (/Users/dclairvoyance/Documents/ITB/Semester8/IF4020 - Kriptografi/Tugas/Tugas1_IF4020_Kripto/app/controllers/enigma_controller.rb:45: syntax error, unexpected '{', expecting `then' or ';' or '\n'
+...             if (v == letter) {
+...                              ^
+/Users/dclairvoyance/Documents/ITB/Semester8/IF4020 - Kriptografi/Tugas/Tugas1_IF4020_Kripto/app/controllers/enigma_controller.rb:48: syntax error, unexpected '}', expecting `end' or dummy end
+                }
+                ^
+/Users/dclairvoyance/Documents/ITB/Semester8/IF4020 - Kriptografi/Tugas/Tugas1_IF4020_Kripto/app/controllers/enigma_controller.rb:76: syntax error, unexpected end-of-input, expecting `end' or dummy end):
+  
+app/controllers/enigma_controller.rb:45: syntax error, unexpected '{', expecting `then' or ';' or '\n'
+app/controllers/enigma_controller.rb:48: syntax error, unexpected '}', expecting `end' or dummy end
+app/controllers/enigma_controller.rb:76: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 20:11:37 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"adawda", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"adawda", "userKey"=>"E N G M"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 132)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 2)):
+  
+app/controllers/enigma_controller.rb:4:in `encrypt'
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 20:11:56 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"adawda", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"adawda", "userKey"=>"E N G M"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 711)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 20:12:01 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"aawdadawda", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"aawdadawda", "userKey"=>"E N G M"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 649)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 20:15:35 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"awdaw", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"awdaw", "userKey"=>"E N G M"}}
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 701)
+
+
+Started POST "/enigma_decrypt" for ::1 at 2024-02-18 20:15:41 +0700
+Processing by EnigmaController#decrypt as */*
+  Parameters: {"userInput"=>"phuph", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"phuph", "userKey"=>"E N G M"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 621)
+
+
+Started POST "/enigma_decrypt" for ::1 at 2024-02-18 20:15:47 +0700
+Processing by EnigmaController#decrypt as */*
+  Parameters: {"userInput"=>"phuph", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"phuph", "userKey"=>"E N G M"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 619)
+
+
+Started POST "/enigma_decrypt" for ::1 at 2024-02-18 20:15:50 +0700
+Processing by EnigmaController#decrypt as */*
+  Parameters: {"userInput"=>"phuph", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"phuph", "userKey"=>"E N G M"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 619)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 20:23:27 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"phuph", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"phuph", "userKey"=>"E N G M"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 804)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 20:23:30 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"phuph", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"phuph", "userKey"=>"E N G M"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 723)
+
+
+Started POST "/enigma_decrypt" for ::1 at 2024-02-18 20:23:32 +0700
+Processing by EnigmaController#decrypt as */*
+  Parameters: {"userInput"=>"phuph", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"phuph", "userKey"=>"E N G M"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 725)
+
+
+Started POST "/enigma_decrypt" for ::1 at 2024-02-18 20:23:34 +0700
+Processing by EnigmaController#decrypt as */*
+  Parameters: {"userInput"=>"phuph", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"phuph", "userKey"=>"E N G M"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 723)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 20:24:24 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"lioli", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"lioli", "userKey"=>"E N G M"}}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 723)
+
+
+Started POST "/enigma_decrypt" for ::1 at 2024-02-18 20:24:26 +0700
+Processing by EnigmaController#decrypt as */*
+  Parameters: {"userInput"=>"lioli", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"lioli", "userKey"=>"E N G M"}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 723)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 20:24:27 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"lioli", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"lioli", "userKey"=>"E N G M"}}
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 723)
+
+
+Started POST "/enigma_decrypt" for ::1 at 2024-02-18 20:24:28 +0700
+Processing by EnigmaController#decrypt as */*
+  Parameters: {"userInput"=>"lioli", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"lioli", "userKey"=>"E N G M"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 724)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 20:24:29 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"lioli", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"lioli", "userKey"=>"E N G M"}}
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 723)
+
+
+Started POST "/enigma_decrypt" for ::1 at 2024-02-18 20:24:30 +0700
+Processing by EnigmaController#decrypt as */*
+  Parameters: {"userInput"=>"lioli", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"lioli", "userKey"=>"E N G M"}}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 723)
+
+
+Started POST "/enigma_decrypt" for ::1 at 2024-02-18 20:24:30 +0700
+Processing by EnigmaController#decrypt as */*
+  Parameters: {"userInput"=>"lioli", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"lioli", "userKey"=>"E N G M"}}
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 723)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 20:24:31 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"lioli", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"lioli", "userKey"=>"E N G M"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 724)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 20:36:07 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"a -> c.    c -> b\na --> c.  c --> d", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"a -> c.    c -> b\na --> c.  c --> d", "userKey"=>"E N G M"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 548)
+
+
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 20:42:02 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"asdawd", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"asdawd", "userKey"=>"E N G M"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 168)
+
+
+  
+NameError (undefined local variable or method `rotors' for an instance of EnigmaController):
+  
+app/controllers/enigma_controller.rb:13:in `block in encrypt'
+app/controllers/enigma_controller.rb:12:in `each_char'
+app/controllers/enigma_controller.rb:12:in `encrypt'
+Started POST "/enigma_encrypt" for ::1 at 2024-02-18 20:42:13 +0700
+Processing by EnigmaController#encrypt as */*
+  Parameters: {"userInput"=>"asdawd", "userKey"=>"E N G M", "enigma"=>{"userInput"=>"asdawd", "userKey"=>"E N G M"}}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 809)
+
+

@@ -41,6 +41,27 @@ const Enigma = () => {
     }
   };
 
+  const enigmaDecryptMessage = async () => {
+    try {
+      var userKey = rotorsSettings.flat().join(" ");
+      const response = await fetch("http://localhost:3001/enigma_decrypt", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          userInput,
+          userKey,
+        }),
+      });
+      const data = await response.json();
+      setUserOutput(data.message);
+    } catch (error) {
+      console.error("Error: ", error);
+      setUserOutput("Error encrypting message.");
+    }
+  };
+
   {
     /* templates */
   }
@@ -145,7 +166,10 @@ const Enigma = () => {
                 <MdLockOutline size="16" />
                 <span className="text-sm">Encrypt</span>
               </button>
-              <button className="bg-primary_2 hover:bg-primary_3 border-primary_3 text-secondary px-2 py-1.5 my-1 lg:ml-1 rounded flex items-center mx-auto">
+              <button
+                onClick={enigmaDecryptMessage}
+                className="bg-primary_2 hover:bg-primary_3 border-primary_3 text-secondary px-2 py-1.5 my-1 lg:ml-1 rounded flex items-center mx-auto"
+              >
                 <MdLockOpen size="16" />
                 <span className="text-sm">Decrypt</span>
               </button>
