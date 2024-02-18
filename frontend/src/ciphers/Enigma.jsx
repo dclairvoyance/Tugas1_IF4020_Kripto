@@ -5,6 +5,7 @@ import TextInput from "../components/TextInput";
 import FileInput from "../components/FileInput";
 import FileOutput from "../components/FileOutput";
 import RotorEnigma from "../components/RotorEnigma";
+import Keyboard from "../components/Keyboard";
 
 const Enigma = () => {
   const [format, setFormat] = useState("text");
@@ -16,10 +17,37 @@ const Enigma = () => {
 
   /* specific Enigma: rotors */
   const [rotorsSettings, setRotorsSettings] = useState(["E", "N", "G", "M"]);
+  const [userInputChar, setUserInputChar] = useState("");
+  const [userOutputChar, setUserOutputChar] = useState("");
 
   {
     /* encryption/decryption */
   }
+  const enigmaEncryptLetter = async (char) => {
+    try {
+      var userKey = rotorsSettings.flat().join(" ");
+      const response = await fetch("http://localhost:3001/enigma_encrypt", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          userInput: char,
+          userKey,
+        }),
+      });
+      const data = await response.json();
+      let newUserOutput = userOutput;
+      newUserOutput = newUserOutput += data.message;
+      setUserOutput(newUserOutput);
+      setUserOutputChar(data.message);
+      handleRotorsRotate();
+    } catch (error) {
+      console.error("Error: ", error);
+      setUserOutput("Error encrypting message.");
+    }
+  };
+
   const enigmaEncryptMessage = async () => {
     try {
       var userKey = rotorsSettings.flat().join(" ");
@@ -100,6 +128,28 @@ const Enigma = () => {
     setRotorsSettings(newRotorsSettings);
   };
 
+  const handleRotorsRotate = () => {
+    const newRotorsSettings = [...rotorsSettings];
+    let i = newRotorsSettings.length - 1;
+    while (i >= 0) {
+      if (newRotorsSettings[i].charCodeAt() === 90) {
+        newRotorsSettings[i] = String.fromCharCode(65);
+        i--;
+      } else {
+        newRotorsSettings[i] = String.fromCharCode(
+          newRotorsSettings[i].charCodeAt() + 1
+        );
+        break;
+      }
+    }
+    setRotorsSettings(newRotorsSettings);
+  };
+
+  const handleUserInputChar = (charInput) => {
+    setUserInputChar(charInput);
+    enigmaEncryptLetter(charInput);
+  };
+
   return (
     <>
       <div className="p-2 bg-primary_1 rounded-md">
@@ -121,6 +171,10 @@ const Enigma = () => {
             {format === "text" && (
               <TextInput handleOnChangeParent={handleUserInput} />
             )}
+            <Keyboard
+              active={userInputChar}
+              handleOnClickParent={handleUserInputChar}
+            />
 
             {/* file input */}
             {format === "file" && (
@@ -196,6 +250,7 @@ const Enigma = () => {
               className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
               value={userOutput}
             ></textarea>
+            <Keyboard active={userOutputChar} />
           </div>
         </div>
       </div>
