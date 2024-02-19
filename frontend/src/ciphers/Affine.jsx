@@ -120,23 +120,31 @@ const Affine = () => {
             <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold text-white">
               Key
             </h2>
-            <div className="flex-row mx-1">
-              <textarea
-                id="key"
-                rows="5"
-                className="w-1/3 h-16 p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3 focus:ring-blue-50 mr-2"
-                placeholder="A Coef"
-                value={aCoef}
-                onChange={(e) => setACoef(e.target.value)}
-              ></textarea>
-              <textarea
-                id="key"
-                rows="5"
-                className="w-1/3 h-16 p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3 focus:ring-blue-50"
-                placeholder="B Coef"
-                value={bCoef}
-                onChange={(e) => setBCoef(e.target.value)}
-              ></textarea>
+            <div className="md:flex mb-3">
+              <div className="flex mb-1 md:w-1/2">
+                <p className="flex items-center ml-1 text-sm font-semibold text-left text-white">
+                  A:{" "}
+                </p>
+                <input
+                  id="key"
+                  type="number"
+                  className="w-20 ml-1 p-1.5 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3 focus:ring-blue-50"
+                  value={aCoef}
+                  onChange={(e) => setACoef(e.target.value)}
+                ></input>
+              </div>
+              <div className="flex mb-1 md:w-1/2">
+                <p className="flex items-center ml-1 text-sm font-semibold text-left text-white">
+                  B:{" "}
+                </p>
+                <input
+                  id="key"
+                  type="number"
+                  className="w-20 ml-1 p-1.5 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3 focus:ring-blue-50"
+                  value={bCoef}
+                  onChange={(e) => setBCoef(e.target.value)}
+                ></input>
+              </div>
             </div>
             <div className="lg:flex">
               <button

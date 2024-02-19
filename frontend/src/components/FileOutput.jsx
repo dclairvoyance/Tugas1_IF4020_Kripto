@@ -12,7 +12,7 @@ const FileOutput = ({ handleOnChangeParent, handleOnSubmitParent }) => {
         type="text"
         id="file-name"
         onChange={handleOnChange}
-        className="md:w-32 w-full p-1.5 rounded-s-md bg-primary_2 border-y border-l border-primary_3 focus:ring-blue-50 text-xs"
+        className="md:w-32 w-full p-1.5 rounded-s-md bg-primary_2 border-y border-l border-primary_3 focus:ring-blue-50 text-xs text-gray-400"
         placeholder="File Name"
       />
       <button

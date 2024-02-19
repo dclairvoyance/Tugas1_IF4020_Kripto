@@ -159,7 +159,7 @@ const Hill = () => {
                 onChange={handleKeySizeChange}
               />
             </div>
-            <div className="flex-col mb-1">
+            <div className="flex-col mb-3">
               {Array.from({ length: keySize }, (_, rowIndex) => (
                 <div className="flex" key={rowIndex}>
                   {Array.from({ length: keySize }, (_, colIndex) => (
@@ -187,9 +187,10 @@ const Hill = () => {
                 <MdLockOutline size="16" />
                 <span className="text-sm">Encrypt</span>
               </button>
-              <button 
+              <button
                 onClick={hillDecryptMessage}
-                className="bg-primary_2 hover:bg-primary_3 border-primary_3 text-secondary px-2 py-1.5 my-1 lg:ml-1 rounded flex items-center mx-auto">
+                className="bg-primary_2 hover:bg-primary_3 border-primary_3 text-secondary px-2 py-1.5 my-1 lg:ml-1 rounded flex items-center mx-auto"
+              >
                 <MdLockOpen size="16" />
                 <span className="text-sm">Decrypt</span>
               </button>

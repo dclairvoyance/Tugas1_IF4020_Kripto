@@ -21,8 +21,10 @@ const FileInput = ({ handleOnChangeParent, fileName }) => {
         />
       </label>
       <div className="flex">
-        <p className="ml-1 text-xs font-bold text-left">File name: </p>
-        <p className="ml-1 text-xs break-all text-left">
+        <p className="ml-1 text-xs font-bold text-left text-white">
+          File name:{" "}
+        </p>
+        <p className="ml-1 text-xs break-all text-left text-gray-400">
           {fileName ? fileName : "No file uploaded..."}
         </p>
       </div>

@@ -169,12 +169,15 @@ const Enigma = () => {
             </h2>
             {/* text input */}
             {format === "text" && (
-              <TextInput handleOnChangeParent={handleUserInput} />
+              <>
+                <TextInput handleOnChangeParent={handleUserInput} />
+                {/* keyboard input */}
+                <Keyboard
+                  active={userInputChar}
+                  handleOnClickParent={handleUserInputChar}
+                />
+              </>
             )}
-            <Keyboard
-              active={userInputChar}
-              handleOnClickParent={handleUserInputChar}
-            />
 
             {/* file input */}
             {format === "file" && (
@@ -250,7 +253,7 @@ const Enigma = () => {
               className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
               value={userOutput}
             ></textarea>
-            <Keyboard active={userOutputChar} />
+            {format === "text" && <Keyboard active={userOutputChar} />}
           </div>
         </div>
       </div>
