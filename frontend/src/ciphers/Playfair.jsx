@@ -58,6 +58,9 @@ const Playfair = () => {
   }
   const handleFormat = (format) => {
     setFormat(format);
+    setUserInput("");
+    setUserOutput("");
+    setFileInputName("No file uploaded...");
   };
 
   const handleUserInput = (textInput) => {

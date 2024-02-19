@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { MdLockOutline, MdLockOpen } from "react-icons/md";
+import { MdLockOutline } from "react-icons/md";
 import Subpage from "../components/Subpage";
 import TextInput from "../components/TextInput";
 import FileInput from "../components/FileInput";
@@ -63,6 +63,9 @@ const Enigma = () => {
   }
   const handleFormat = (format) => {
     setFormat(format);
+    setUserInput("");
+    setUserOutput("");
+    setFileInputName("No file uploaded...");
   };
 
   const handleUserInput = (textInput) => {
@@ -71,6 +74,12 @@ const Enigma = () => {
   const handleFileInputChange = (event) => {
     const file = event.target.files[0];
     setFileInputName(file.name);
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      setUserInput(e.target.result);
+    };
+    reader.readAsText(file);
   };
 
   const handleFileOutputChange = (fileNameInput) => {
