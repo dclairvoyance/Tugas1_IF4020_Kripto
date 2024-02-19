@@ -26,5 +26,13 @@ Rails.application.routes.draw do
     post '/enigma_decrypt', to: 'enigma#decrypt'
     post '/playfair_encrypt', to: 'playfair#encrypt'
     post '/playfair_decrypt', to: 'playfair#decrypt'
+    post '/extended_vigenere_encrypt', to: 'extended_vigenere#encrypt'
+    post '/extended_vigenere_decrypt', to: 'extended_vigenere#decrypt'
+    post '/extended_vigenere_file_encrypt', to: 'extended_vigenere#file_encrypt'
+    post '/extended_vigenere_file_decrypt', to: 'extended_vigenere#file_decrypt'
+    post '/super_encrypt', to: 'super_encrypt#encrypt'
+    post '/super_decrypt', to: 'super_encrypt#decrypt'
+    post '/super_file_encrypt', to: 'super_encrypt#file_encrypt'
+    post '/super_file_decrypt', to: 'super_encrypt#file_decrypt'
   end
 end
