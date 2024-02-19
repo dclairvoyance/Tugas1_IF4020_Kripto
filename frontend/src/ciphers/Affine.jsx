@@ -120,7 +120,7 @@ const Affine = () => {
             <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold text-white">
               Key
             </h2>
-            <div className="md:flex mb-3">
+            <div className="md:flex mb-0.5">
               <div className="flex mb-1 md:w-1/2">
                 <p className="flex items-center ml-1 text-sm font-semibold text-left text-white">
                   A:{" "}

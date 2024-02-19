@@ -14,7 +14,7 @@ const RotorEnigma = ({ index, rotorSettings, handleOnChangeParent }) => {
   };
 
   return (
-    <div className="w-full bg-primary_2 rounded-md mr-1">
+    <div className="w-full bg-primary_2 rounded-md mr-1 border border-primary_3">
       <div className="flex justify-center cursor-pointer">
         <MdKeyboardArrowUp
           color="#9ca3af"

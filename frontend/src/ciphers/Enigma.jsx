@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { MdLockOutline, MdLockOpen } from "react-icons/md";
 import Subpage from "../components/Subpage";
 import TextInput from "../components/TextInput";
@@ -20,35 +20,17 @@ const Enigma = () => {
   const [userInputChar, setUserInputChar] = useState("");
   const [userOutputChar, setUserOutputChar] = useState("");
 
+  useEffect(() => {
+    if (userInputChar !== "") {
+      enigmaSendMessage();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userInputChar]);
+
   {
     /* encryption/decryption */
   }
-  const enigmaEncryptLetter = async (char) => {
-    try {
-      var userKey = rotorsSettings.flat().join(" ");
-      const response = await fetch("http://localhost:3001/enigma_encrypt", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          userInput: char,
-          userKey,
-        }),
-      });
-      const data = await response.json();
-      let newUserOutput = userOutput;
-      newUserOutput = newUserOutput += data.message;
-      setUserOutput(newUserOutput);
-      setUserOutputChar(data.message);
-      handleRotorsRotate();
-    } catch (error) {
-      console.error("Error: ", error);
-      setUserOutput("Error encrypting message.");
-    }
-  };
-
-  const enigmaEncryptMessage = async () => {
+  const enigmaSendMessage = async () => {
     try {
       var userKey = rotorsSettings.flat().join(" ");
       const response = await fetch("http://localhost:3001/enigma_encrypt", {
@@ -62,28 +44,14 @@ const Enigma = () => {
         }),
       });
       const data = await response.json();
-      setUserOutput(data.message);
-    } catch (error) {
-      console.error("Error: ", error);
-      setUserOutput("Error encrypting message.");
-    }
-  };
-
-  const enigmaDecryptMessage = async () => {
-    try {
-      var userKey = rotorsSettings.flat().join(" ");
-      const response = await fetch("http://localhost:3001/enigma_decrypt", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          userInput,
-          userKey,
-        }),
-      });
-      const data = await response.json();
-      setUserOutput(data.message);
+      if (format === "keyboard") {
+        setUserOutputChar(data.message);
+        let newUserOutput = userOutput;
+        setUserOutput((newUserOutput += data.message));
+      } else {
+        setUserOutput(data.message);
+      }
+      handleRotorsRotate(data.next_key);
     } catch (error) {
       console.error("Error: ", error);
       setUserOutput("Error encrypting message.");
@@ -128,26 +96,30 @@ const Enigma = () => {
     setRotorsSettings(newRotorsSettings);
   };
 
-  const handleRotorsRotate = () => {
-    const newRotorsSettings = [...rotorsSettings];
-    let i = newRotorsSettings.length - 1;
-    while (i >= 0) {
-      if (newRotorsSettings[i].charCodeAt() === 90) {
-        newRotorsSettings[i] = String.fromCharCode(65);
-        i--;
-      } else {
-        newRotorsSettings[i] = String.fromCharCode(
-          newRotorsSettings[i].charCodeAt() + 1
-        );
-        break;
-      }
-    }
-    setRotorsSettings(newRotorsSettings);
+  const handleRotorsRotate = (keys) => {
+    /* rotate in frontend */
+    // const newRotorsSettings = [...rotorsSettings];
+    // let i = newRotorsSettings.length - 1;
+    // while (i >= 0) {
+    //   if (newRotorsSettings[i].charCodeAt() === 90) {
+    //     newRotorsSettings[i] = String.fromCharCode(65);
+    //     i--;
+    //   } else {
+    //     newRotorsSettings[i] = String.fromCharCode(
+    //       newRotorsSettings[i].charCodeAt() + 1
+    //     );
+    //     break;
+    //   }
+    // }
+    // setRotorsSettings(newRotorsSettings);
+
+    /* rotate in backend */
+    setRotorsSettings(keys.split(""));
   };
 
   const handleUserInputChar = (charInput) => {
+    setUserInput(charInput);
     setUserInputChar(charInput);
-    enigmaEncryptLetter(charInput);
   };
 
   return (
@@ -157,7 +129,7 @@ const Enigma = () => {
         <Subpage
           currentVariable={format}
           handleVariable={handleFormat}
-          variables={["text", "file"]}
+          variables={["text", "file", "keyboard"]}
         />
 
         {/* input/output */}
@@ -169,14 +141,15 @@ const Enigma = () => {
             </h2>
             {/* text input */}
             {format === "text" && (
-              <>
-                <TextInput handleOnChangeParent={handleUserInput} />
-                {/* keyboard input */}
-                <Keyboard
-                  active={userInputChar}
-                  handleOnClickParent={handleUserInputChar}
-                />
-              </>
+              <TextInput handleOnChangeParent={handleUserInput} />
+            )}
+
+            {/* keyboard input */}
+            {format === "keyboard" && (
+              <Keyboard
+                active={userInputChar}
+                handleOnClickParent={handleUserInputChar}
+              />
             )}
 
             {/* file input */}
@@ -193,7 +166,7 @@ const Enigma = () => {
             <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold text-white">
               Key
             </h2>
-            <div className="flex">
+            <div className="flex mb-2">
               <RotorEnigma
                 index={0}
                 rotorSettings={rotorsSettings[0]}
@@ -217,18 +190,11 @@ const Enigma = () => {
             </div>
             <div className="lg:flex">
               <button
-                onClick={enigmaEncryptMessage}
+                onClick={enigmaSendMessage}
                 className="bg-primary_2 hover:bg-primary_3 border-primary_3 text-secondary px-2 py-1.5 my-1 lg:mr-1 rounded flex items-center mx-auto"
               >
                 <MdLockOutline size="16" />
-                <span className="text-sm">Encrypt</span>
-              </button>
-              <button
-                onClick={enigmaDecryptMessage}
-                className="bg-primary_2 hover:bg-primary_3 border-primary_3 text-secondary px-2 py-1.5 my-1 lg:ml-1 rounded flex items-center mx-auto"
-              >
-                <MdLockOpen size="16" />
-                <span className="text-sm">Decrypt</span>
+                <span className="text-sm">Send</span>
               </button>
             </div>
           </div>
@@ -245,6 +211,7 @@ const Enigma = () => {
                 handleOnSubmitParent={handleFileOutputSubmit}
               />
             </div>
+            {format === "keyboard" && <Keyboard active={userOutputChar} />}
             <textarea
               readOnly
               id="output"
@@ -253,7 +220,6 @@ const Enigma = () => {
               className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
               value={userOutput}
             ></textarea>
-            {format === "text" && <Keyboard active={userOutputChar} />}
           </div>
         </div>
       </div>

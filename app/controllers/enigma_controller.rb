@@ -12,9 +12,13 @@ class EnigmaController < ApplicationController
         message = ""
         user_input.each_char do |char|
             message += encrypt_letter(char, rotors, reflector)
+            user_key = rotate_rotors(user_key)
+            settings = set_settings(user_key)
+            rotors = settings[:rotors]
+            reflector = settings[:reflector]
         end
     
-        render json: { message: message }
+        render json: { message: message, next_key: user_key }
     end
     
     def decrypt
@@ -98,6 +102,20 @@ class EnigmaController < ApplicationController
             reflector[wiring[25-i]] = wiring[i]
         end
         reflector
-    end 
+    end
+
+    def rotate_rotors(keys)
+        i = keys.length - 1
+        while i >= 0
+            if keys[i].ord - "A".ord == 25
+                keys[i] = "A"
+                i -= 1
+            else
+                keys[i] = (keys[i].ord + 1).chr
+                break
+            end
+        end
+        keys
+    end
 end
     

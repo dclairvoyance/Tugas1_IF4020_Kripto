@@ -8,7 +8,7 @@ const Keyboard = ({ active, handleOnClickParent }) => {
   ];
 
   return (
-    <>
+    <div className="mb-2">
       {keyboard.map((row, rowIndex) => (
         <div key={rowIndex} className="w-full flex justify-center gap-1 my-1">
           {row.map((char) => (
@@ -26,7 +26,7 @@ const Keyboard = ({ active, handleOnClickParent }) => {
           ))}
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
