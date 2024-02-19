@@ -27,8 +27,11 @@ const Vigenere = () => {
     else if (variant === "autokey") {
       await vigenereAutoEncryptMessage();
     }
-    else if (variant === "extended") {
+    else if (variant === "extended" && format === "text") {
       await extendedVigenereEncryptMessage();
+    }
+    else if (variant === "extended" && format === "file") {
+      await extendedVigenereFileEncryptMessage();
     }
   };
 
@@ -84,6 +87,24 @@ const Vigenere = () => {
     }
   };
 
+  const extendedVigenereFileEncryptMessage = async () => {
+    try {
+      const response = await fetch('http://localhost:3001/extended_vigenere_file_encrypt', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userInput, userKey }),
+      });
+      const data = await response.json();
+      const decoded_data = atob(data.message)
+      setUserOutput(decoded_data);
+    } catch (error) {
+      console.error('Error:', error);
+      setUserOutput('Error encrypting message.');
+    }
+  };
+
   const decryptAction = async () => {
     if (variant === "standard") {
       await vigenereDecryptMessage();
@@ -91,8 +112,11 @@ const Vigenere = () => {
     else if (variant === "autokey") {
       await vigenereAutoDecryptMessage();
     }
-    else if (variant === "extended") {
+    else if (variant === "extended" && format === "text") {
       await extendedVigenereDecryptMessage();
+    }
+    else if (variant === "extended" && format === "file") {
+      await extendedVigenereFileDecryptMessage();
     }
   };
 
@@ -141,6 +165,24 @@ const Vigenere = () => {
       });
       const data = await response.json();
       setUserOutput(data.message);
+    } catch (error) {
+      console.error('Error:', error);
+      setUserOutput('Error decrypting message.');
+    }
+  };
+
+  const extendedVigenereFileDecryptMessage = async () => {
+    try {
+      const response = await fetch('http://localhost:3001/extended_vigenere_file_decrypt', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userInput, userKey }),
+      });
+      const data = await response.json();
+      const decoded_data = atob(data.message)
+      setUserOutput(decoded_data);
     } catch (error) {
       console.error('Error:', error);
       setUserOutput('Error decrypting message.');
