@@ -10,6 +10,7 @@ const Vigenere = () => {
   const [format, setFormat] = useState("text");
   const [fileInputName, setFileInputName] = useState("");
   const [fileOutputName, setFileOutputName] = useState("");
+  const [fileInput, setFileInput] = useState(null);
   const [userInput, setUserInput] = useState("");
   const [userOutput, setUserOutput] = useState("");
   const outputTextArea = useRef(null);
@@ -89,16 +90,29 @@ const Vigenere = () => {
 
   const extendedVigenereFileEncryptMessage = async () => {
     try {
+      const formData = new FormData();
+      formData.append('file', fileInput);
+      formData.append('userKey', userKey);
+
       const response = await fetch('http://localhost:3001/extended_vigenere_file_encrypt', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ userInput, userKey }),
+        body: formData
       });
-      const data = await response.json();
-      const decoded_data = atob(data.message)
-      setUserOutput(decoded_data);
+      let filename = "encrypted_" + fileInput.name;
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+  
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+  
+      window.URL.revokeObjectURL(url);
+      link.remove();
+  
+      setUserOutput('File downloaded successfully.');
     } catch (error) {
       console.error('Error:', error);
       setUserOutput('Error encrypting message.');
@@ -164,7 +178,8 @@ const Vigenere = () => {
         body: JSON.stringify({ userInput, userKey }),
       });
       const data = await response.json();
-      setUserOutput(data.message);
+      const decoded_data = atob(data.message)
+      setUserOutput(decoded_data);
     } catch (error) {
       console.error('Error:', error);
       setUserOutput('Error decrypting message.');
@@ -173,16 +188,29 @@ const Vigenere = () => {
 
   const extendedVigenereFileDecryptMessage = async () => {
     try {
+      const formData = new FormData();
+      formData.append('file', fileInput);
+      formData.append('userKey', userKey);
+
       const response = await fetch('http://localhost:3001/extended_vigenere_file_decrypt', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ userInput, userKey }),
+        body: formData,
       });
-      const data = await response.json();
-      const decoded_data = atob(data.message)
-      setUserOutput(decoded_data);
+      let filename = "decrypted_" + fileInput.name;
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+  
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+  
+      window.URL.revokeObjectURL(url);
+      link.remove();
+  
+      setUserOutput('File downloaded successfully.');
     } catch (error) {
       console.error('Error:', error);
       setUserOutput('Error decrypting message.');
@@ -205,6 +233,7 @@ const Vigenere = () => {
   const handleFileInputChange = (event) => {
     const file = event.target.files[0];
     setFileInputName(file.name);
+    setFileInput(file);
 
     const reader = new FileReader();
     reader.onload = (e) => {
