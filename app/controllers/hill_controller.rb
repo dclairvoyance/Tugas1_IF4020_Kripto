@@ -30,6 +30,9 @@ class HillController < ApplicationController
     cipher_matrix_input = params[:cipherMatrix].to_s.split(' ').map(&:to_i).each_slice(size).to_a
     cipher_matrix = Matrix[*cipher_matrix_input]
     cipher_matrix_processed = matrix_mod_inverse(cipher_matrix)
+    if cipher_matrix_processed == "The matrix is not invertible"
+      return render json: { message: cipher_matrix_processed }
+    end
     message = ""
     padding_length = (size - (user_input.length % size)) % size
     input_padded = user_input + 'Z' * padding_length
@@ -76,7 +79,9 @@ class HillController < ApplicationController
     det = cipher_matrix.determinant.round
     det_inv = mod_inv(det)
   
-    raise "The determinant #{det} has no inverse modulo #{26}." if det_inv.nil?
+    if det_inv.nil?
+      return "The matrix is not invertible"
+    end
   
     cofactor = cofactor_matrix(cipher_matrix)
     adjugate = cofactor.transpose

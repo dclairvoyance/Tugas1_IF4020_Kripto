@@ -1,6 +1,7 @@
 require 'base64'
 
 class ExtendedVigenereController < ApplicationController
+  # skip_before_action :verify_authenticity_token
 
   def encrypt
     user_input = params[:userInput].to_s

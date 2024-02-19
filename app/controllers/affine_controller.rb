@@ -5,6 +5,11 @@ class AffineController < ApplicationController
     user_input = params[:userInput].to_s.upcase.gsub(/[^A-Z]/, '')
     a_coef = params[:aCoef].to_i
     b_coef = params[:bCoef].to_i
+
+    if 26 % a_coef == 0
+      return render json: { message: "A coefficient error" }
+    end
+
     message = ""
   
     user_input.each_char do |char|
@@ -19,6 +24,10 @@ class AffineController < ApplicationController
     user_input = params[:userInput].to_s.upcase.gsub(/[^A-Z]/, '')
     a_coef = params[:aCoef].to_i
     b_coef = params[:bCoef].to_i
+    if 26 % a_coef == 0
+      return render json: { message: "A coefficient error" }
+    end
+
     message = ""
     a_inverse = calc_inverse(a_coef)
   
