@@ -1,7 +1,6 @@
 require 'base64'
 
 class SuperEncryptController < ApplicationController
-  # skip_before_action :verify_authenticity_token
 
   def encrypt
     user_input = params[:userInput].to_s
@@ -29,7 +28,6 @@ class SuperEncryptController < ApplicationController
     end
 
     encoded_message = Base64.strict_encode64(transpose_message)
-    puts(encoded_message)
     render json: { message: encoded_message }
   end
 
@@ -87,7 +85,6 @@ class SuperEncryptController < ApplicationController
     end
   
     encoded_message = Base64.strict_encode64(message)
-    puts(encoded_message)
     render json: { message: encoded_message }
   end
 
