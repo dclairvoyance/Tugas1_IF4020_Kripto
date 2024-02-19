@@ -211,7 +211,7 @@ const Enigma = () => {
           {/* output */}
           <div className="basis-5/12 flex-col mx-1">
             <div className="md:flex md:justify-between mb-1">
-              <h2 className="h-8 items-center ml-1 flex text-md font-semibol text-white">
+              <h2 className="h-8 items-center ml-1 flex text-md font-semibold text-white">
                 Output
               </h2>
               {/* download as txt file */}
