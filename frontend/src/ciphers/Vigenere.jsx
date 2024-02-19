@@ -24,6 +24,12 @@ const Vigenere = () => {
     if (variant === "standard") {
       await vigenereEncryptMessage();
     }
+    else if (variant === "autokey") {
+      await vigenereAutoEncryptMessage();
+    }
+    else if (variant === "extended") {
+      await extendedVigenereEncryptMessage();
+    }
   };
 
   const vigenereEncryptMessage = async () => {
@@ -43,9 +49,50 @@ const Vigenere = () => {
     }
   };
 
+  const vigenereAutoEncryptMessage = async () => {
+    try {
+      const response = await fetch('http://localhost:3001/vigenere_auto_encrypt', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userInput, userKey }),
+      });
+      const data = await response.json();
+      setUserOutput(data.message);
+    } catch (error) {
+      console.error('Error:', error);
+      setUserOutput('Error encrypting message.');
+    }
+  };
+
+  const extendedVigenereEncryptMessage = async () => {
+    try {
+      const response = await fetch('http://localhost:3001/extended_vigenere_encrypt', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userInput, userKey }),
+      });
+      const data = await response.json();
+      const decoded_data = atob(data.message)
+      setUserOutput(decoded_data);
+    } catch (error) {
+      console.error('Error:', error);
+      setUserOutput('Error encrypting message.');
+    }
+  };
+
   const decryptAction = async () => {
     if (variant === "standard") {
       await vigenereDecryptMessage();
+    }
+    else if (variant === "autokey") {
+      await vigenereAutoDecryptMessage();
+    }
+    else if (variant === "extended") {
+      await extendedVigenereDecryptMessage();
     }
   };
 
@@ -63,6 +110,40 @@ const Vigenere = () => {
     } catch (error) {
       console.error("Error: ", error);
       setUserOutput("Error decrypting message.");
+    }
+  };
+
+  const vigenereAutoDecryptMessage = async () => {
+    try {
+      const response = await fetch('http://localhost:3001/vigenere_auto_decrypt', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userInput, userKey }),
+      });
+      const data = await response.json();
+      setUserOutput(data.message);
+    } catch (error) {
+      console.error('Error:', error);
+      setUserOutput('Error encrypting message.');
+    }
+  };
+
+  const extendedVigenereDecryptMessage = async () => {
+    try {
+      const response = await fetch('http://localhost:3001/extended_vigenere_decrypt', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userInput, userKey }),
+      });
+      const data = await response.json();
+      setUserOutput(data.message);
+    } catch (error) {
+      console.error('Error:', error);
+      setUserOutput('Error decrypting message.');
     }
   };
 
