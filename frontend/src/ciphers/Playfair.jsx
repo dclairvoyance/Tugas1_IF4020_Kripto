@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { MdLockOutline, MdLockOpen } from "react-icons/md";
 import Subpage from "../components/Subpage";
 import TextInput from "../components/TextInput";
@@ -10,8 +10,8 @@ const Playfair = () => {
   const [fileInputName, setFileInputName] = useState("");
   const [fileOutputName, setFileOutputName] = useState("");
   const [userInput, setUserInput] = useState("");
-  const [userOutput, setUserOutput] = useState("");
-  const outputTextArea = useRef(null);
+  const [userOutput, setUserOutput] = useState(""); // base64
+  const [fileOutput, setFileOutput] = useState(""); // 26-alphabet
 
   /* specific Playfair: key */
   const [userKey, setUserKey] = useState("");
@@ -29,7 +29,8 @@ const Playfair = () => {
         body: JSON.stringify({ userInput, userKey }),
       });
       const data = await response.json();
-      setUserOutput(data.message);
+      setUserOutput(btoa(data.message));
+      setFileOutput(data.message);
     } catch (error) {
       console.error("Error: ", error);
       setUserOutput("Error encrypting message.");
@@ -46,7 +47,8 @@ const Playfair = () => {
         body: JSON.stringify({ userInput, userKey }),
       });
       const data = await response.json();
-      setUserOutput(data.message);
+      setUserOutput(btoa(data.message));
+      setFileOutput(data.message);
     } catch (error) {
       console.error("Error: ", error);
       setUserOutput("Error decrypting message.");
@@ -60,6 +62,7 @@ const Playfair = () => {
     setFormat(format);
     setUserInput("");
     setUserOutput("");
+    setFileOutput("");
     setFileInputName("No file uploaded...");
   };
 
@@ -82,7 +85,7 @@ const Playfair = () => {
   };
   const handleFileOutputSubmit = () => {
     const element = document.createElement("a");
-    const file = new Blob([outputTextArea.current.value], {
+    const file = new Blob([fileOutput], {
       type: "text/plain",
     });
     element.href = URL.createObjectURL(file);
@@ -168,7 +171,6 @@ const Playfair = () => {
             <textarea
               readOnly
               id="output"
-              ref={outputTextArea}
               rows="10"
               className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
               value={userOutput}
