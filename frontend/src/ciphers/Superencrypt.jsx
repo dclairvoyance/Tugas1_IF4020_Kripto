@@ -85,11 +85,12 @@ const Superencrypt = () => {
       setFileURL(url);
 
       const reader = new FileReader();
-      reader.onload = function (event) {
+      reader.onload = function(event) {               
         setUserOutput(event.target.result);
       };
+      
+      reader.readAsText(blob, 'ASCII');
 
-      reader.readAsText(blob);
     } catch (error) {
       console.error("Error:", error);
       setUserOutput("Error downloading file.");
@@ -139,11 +140,12 @@ const Superencrypt = () => {
       setFileURL(url);
 
       const reader = new FileReader();
-      reader.onload = function (event) {
+      reader.onload = function(event) {               
         setUserOutput(event.target.result);
       };
+      
+      reader.readAsText(blob, 'ASCII');
 
-      reader.readAsText(blob);
     } catch (error) {
       console.error("Error:", error);
       setUserOutput("Error downloading file.");
