@@ -197,10 +197,10 @@ const Enigma = () => {
                 handleOnChangeParent={handleRotorSettingsChange}
               />
             </div>
-            <div className="lg:flex">
+            <div>
               <button
                 onClick={enigmaSendMessage}
-                className="bg-primary_2 hover:bg-primary_3 border-primary_3 text-secondary px-2 py-1.5 my-1 lg:mr-1 rounded flex items-center mx-auto"
+                className="bg-primary_2 hover:bg-primary_3 border-primary_3 text-secondary px-2 py-1.5 my-1 rounded flex items-center mx-auto"
               >
                 <MdLockOutline size="16" />
                 <span className="text-sm">Send</span>
