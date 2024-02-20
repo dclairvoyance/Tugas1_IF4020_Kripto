@@ -10,7 +10,7 @@ class SuperEncryptController < ApplicationController
     message = ""
   
     padding_length = (num_cols - (user_input.length % num_cols)) % num_cols
-    user_input = user_input + "\x00" * padding_length
+    user_input = user_input + "Z" * padding_length
 
     user_input.each_char do |char|
       encrypted_value = (char.ord + user_key[key_index].ord) % 256
@@ -44,7 +44,7 @@ class SuperEncryptController < ApplicationController
     message = ""
   
     padding_length = (num_cols - (user_input.length % num_cols)) % num_cols
-    user_input = user_input + "\x00" * padding_length
+    user_input = user_input + "Z" * padding_length
 
     user_input.each_char do |char|
       encrypted_value = (char.ord + user_key[key_index].ord) % 256
@@ -93,7 +93,6 @@ class SuperEncryptController < ApplicationController
       key_index = (key_index + 1) % user_key.length
     end
   
-    message = message.gsub(/\x00+$/, '')
     encoded_message = Base64.strict_encode64(message)
     render json: { message: encoded_message }
   end
@@ -126,7 +125,6 @@ class SuperEncryptController < ApplicationController
       key_index = (key_index + 1) % user_key.length
     end
 
-    message = message.gsub(/\x00+$/, '')
     send_data message, type: 'application/octet-stream', disposition: 'attachment'
   end
 
