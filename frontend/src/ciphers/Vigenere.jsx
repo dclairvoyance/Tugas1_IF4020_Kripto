@@ -11,6 +11,7 @@ const Vigenere = () => {
   const [fileInputName, setFileInputName] = useState("");
   const [fileOutputName, setFileOutputName] = useState("");
   const [fileInput, setFileInput] = useState(null);
+  const [fileURL, setFileURL] = useState(null);
   const [userInput, setUserInput] = useState("");
   const [userOutput, setUserOutput] = useState("");
   const outputTextArea = useRef(null);
@@ -98,21 +99,17 @@ const Vigenere = () => {
         method: 'POST',
         body: formData
       });
-      let filename = "encrypted_" + fileInput.name;
 
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
-  
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = filename;
-      document.body.appendChild(link);
-      link.click();
-  
-      window.URL.revokeObjectURL(url);
-      link.remove();
-  
-      setUserOutput('File downloaded successfully.');
+      setFileURL(url);
+
+      const reader = new FileReader()
+      reader.onload = function(event) {
+        setUserOutput(event.target.result);
+      };
+
+      reader.readAsText(blob);
     } catch (error) {
       console.error('Error:', error);
       setUserOutput('Error encrypting message.');
@@ -196,21 +193,17 @@ const Vigenere = () => {
         method: 'POST',
         body: formData,
       });
-      let filename = "decrypted_" + fileInput.name;
 
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
-  
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = filename;
-      document.body.appendChild(link);
-      link.click();
-  
-      window.URL.revokeObjectURL(url);
-      link.remove();
-  
-      setUserOutput('File downloaded successfully.');
+      setFileURL(url);
+
+      const reader = new FileReader()
+      reader.onload = function(event) {
+        setUserOutput(event.target.result);
+      };
+
+      reader.readAsText(blob)
     } catch (error) {
       console.error('Error:', error);
       setUserOutput('Error decrypting message.');
@@ -254,7 +247,13 @@ const Vigenere = () => {
     const file = new Blob([outputTextArea.current.value], {
       type: "text/plain",
     });
-    element.href = URL.createObjectURL(file);
+
+    if (variant === "extended" && format === "file") {
+      element.href = fileURL
+    } else {
+      element.href = URL.createObjectURL(file);
+    }
+    
     element.download = fileOutputName ? fileOutputName : "encrypted";
     document.body.appendChild(element); // Firefox
     element.click();

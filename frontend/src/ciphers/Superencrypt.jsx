@@ -9,6 +9,8 @@ const Superencrypt = () => {
   const [format, setFormat] = useState("text");
   const [fileInputName, setFileInputName] = useState("");
   const [fileOutputName, setFileOutputName] = useState("");
+  const [fileInput, setFileInput] = useState(null);
+  const [fileURL, setFileURL] = useState(null);
   const [userInput, setUserInput] = useState("");
   const [userOutput, setUserOutput] = useState("");
   const outputTextArea = useRef(null);
@@ -27,6 +29,7 @@ const Superencrypt = () => {
   const handleFileInputChange = (event) => {
     const file = event.target.files[0];
     setFileInputName(file.name);
+    setFileInput(file)
 
     const reader = new FileReader();
     reader.onload = (e) => {
@@ -40,6 +43,15 @@ const Superencrypt = () => {
   };
 
   const encryptAction = async () => {
+    if (format === "text") {
+      await superEncryptAction();
+    }
+    else {
+      await superFileEncryptMessage();
+    }
+  };
+
+  const superEncryptAction = async () => {
     try {
       const response = await fetch("http://localhost:3001/super_encrypt", {
         method: "POST",
@@ -57,7 +69,45 @@ const Superencrypt = () => {
     }
   };
 
+  const superFileEncryptMessage = async () => {
+    try {
+      const formData = new FormData();
+      formData.append('file', fileInput);
+      formData.append('userKey', userKey);
+      formData.append('numCols', numCols);
+  
+      const response = await fetch('http://localhost:3001/super_file_encrypt', {
+        method: 'POST',
+        body: formData,
+      });
+  
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      setFileURL(url);
+
+      const reader = new FileReader()
+      reader.onload = function(event) {
+        setUserOutput(event.target.result);
+      };
+
+      reader.readAsText(blob);
+
+    } catch (error) {
+      console.error('Error:', error);
+      setUserOutput('Error downloading file.');
+    }
+  };
+
   const decryptAction = async () => {
+    if (format === "text") {
+      await superDecryptAction();
+    }
+    else {
+      await superFileDecryptMessage();
+    }
+  };
+
+  const superDecryptAction = async () => {
     try {
       const response = await fetch("http://localhost:3001/super_decrypt", {
         method: "POST",
@@ -75,12 +125,38 @@ const Superencrypt = () => {
     }
   };
 
+  const superFileDecryptMessage = async () => {
+    try {
+      const formData = new FormData();
+      formData.append('file', fileInput);
+      formData.append('userKey', userKey);
+      formData.append('numCols', numCols);
+  
+      const response = await fetch('http://localhost:3001/super_file_decrypt', {
+        method: 'POST',
+        body: formData,
+      });
+  
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      setFileURL(url);
+
+      const reader = new FileReader()
+      reader.onload = function(event) {
+        setUserOutput(event.target.result);
+      };
+
+      reader.readAsText(blob)
+
+    } catch (error) {
+      console.error('Error:', error);
+      setUserOutput('Error downloading file.');
+    }
+  };
+
   const handleFileOutputSubmit = () => {
     const element = document.createElement("a");
-    const file = new Blob([outputTextArea.current.value], {
-      type: "text/plain",
-    });
-    element.href = URL.createObjectURL(file);
+    element.href = fileURL;
     element.download = fileOutputName ? fileOutputName : "encrypted";
     document.body.appendChild(element); // Firefox
     element.click();
