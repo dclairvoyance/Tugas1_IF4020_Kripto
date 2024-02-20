@@ -85,12 +85,12 @@ const Superencrypt = () => {
       const url = window.URL.createObjectURL(blob);
       setFileURL(url);
 
-      const reader = new FileReader()
-      reader.onload = function(event) {
+      const reader = new FileReader();
+      reader.onload = function(event) {               
         setUserOutput(event.target.result);
       };
-
-      reader.readAsText(blob);
+      
+      reader.readAsText(blob, 'ASCII');
 
     } catch (error) {
       console.error('Error:', error);
@@ -141,12 +141,12 @@ const Superencrypt = () => {
       const url = window.URL.createObjectURL(blob);
       setFileURL(url);
 
-      const reader = new FileReader()
-      reader.onload = function(event) {
+      const reader = new FileReader();
+      reader.onload = function(event) {               
         setUserOutput(event.target.result);
       };
-
-      reader.readAsText(blob)
+      
+      reader.readAsText(blob, 'ASCII');
 
     } catch (error) {
       console.error('Error:', error);
