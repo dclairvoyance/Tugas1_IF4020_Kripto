@@ -29,7 +29,7 @@ const Superencrypt = () => {
   const handleFileInputChange = (event) => {
     const file = event.target.files[0];
     setFileInputName(file.name);
-    setFileInput(file)
+    setFileInput(file);
 
     const reader = new FileReader();
     reader.onload = (e) => {
@@ -45,8 +45,7 @@ const Superencrypt = () => {
   const encryptAction = async () => {
     if (format === "text") {
       await superEncryptAction();
-    }
-    else {
+    } else {
       await superFileEncryptMessage();
     }
   };
@@ -61,7 +60,7 @@ const Superencrypt = () => {
         body: JSON.stringify({ userInput, userKey, numCols }),
       });
       const data = await response.json();
-      const decoded_data = atob(data.message)
+      const decoded_data = atob(data.message);
       setUserOutput(decoded_data);
     } catch (error) {
       console.error("Error: ", error);
@@ -72,15 +71,15 @@ const Superencrypt = () => {
   const superFileEncryptMessage = async () => {
     try {
       const formData = new FormData();
-      formData.append('file', fileInput);
-      formData.append('userKey', userKey);
-      formData.append('numCols', numCols);
-  
-      const response = await fetch('http://localhost:3001/super_file_encrypt', {
-        method: 'POST',
+      formData.append("file", fileInput);
+      formData.append("userKey", userKey);
+      formData.append("numCols", numCols);
+
+      const response = await fetch("http://localhost:3001/super_file_encrypt", {
+        method: "POST",
         body: formData,
       });
-  
+
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       setFileURL(url);
@@ -93,16 +92,15 @@ const Superencrypt = () => {
       reader.readAsText(blob, 'ASCII');
 
     } catch (error) {
-      console.error('Error:', error);
-      setUserOutput('Error downloading file.');
+      console.error("Error:", error);
+      setUserOutput("Error downloading file.");
     }
   };
 
   const decryptAction = async () => {
     if (format === "text") {
       await superDecryptAction();
-    }
-    else {
+    } else {
       await superFileDecryptMessage();
     }
   };
@@ -117,7 +115,7 @@ const Superencrypt = () => {
         body: JSON.stringify({ userInput, userKey, numCols }),
       });
       const data = await response.json();
-      const decoded_data = atob(data.message)
+      const decoded_data = atob(data.message);
       setUserOutput(decoded_data);
     } catch (error) {
       console.error("Error: ", error);
@@ -128,15 +126,15 @@ const Superencrypt = () => {
   const superFileDecryptMessage = async () => {
     try {
       const formData = new FormData();
-      formData.append('file', fileInput);
-      formData.append('userKey', userKey);
-      formData.append('numCols', numCols);
-  
-      const response = await fetch('http://localhost:3001/super_file_decrypt', {
-        method: 'POST',
+      formData.append("file", fileInput);
+      formData.append("userKey", userKey);
+      formData.append("numCols", numCols);
+
+      const response = await fetch("http://localhost:3001/super_file_decrypt", {
+        method: "POST",
         body: formData,
       });
-  
+
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       setFileURL(url);
@@ -149,8 +147,8 @@ const Superencrypt = () => {
       reader.readAsText(blob, 'ASCII');
 
     } catch (error) {
-      console.error('Error:', error);
-      setUserOutput('Error downloading file.');
+      console.error("Error:", error);
+      setUserOutput("Error downloading file.");
     }
   };
 
@@ -198,26 +196,25 @@ const Superencrypt = () => {
             <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold text-white">
               Key
             </h2>
-            <div className="flex-col mx-1">
-              <textarea
+            <div className="flex-col mx-1 mb-3">
+              <input
                 id="key"
-                rows="5"
-                className="h-16 p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3 focus:ring-blue-50 mr-2"
+                className="mb-3 w-full p-1.5 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3 focus:ring-blue-50 mr-2"
                 placeholder="Key"
                 value={userKey}
                 onChange={(e) => setUserKey(e.target.value)}
-              ></textarea>
-              <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold text-white">
+              ></input>
+              <h2 className="mb-2 flex text-start text-md font-semibold text-white">
                 Column Number
               </h2>
-              <textarea
+              <input
                 id="key"
-                rows="5"
-                className="h-16 p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3 focus:ring-blue-50"
+                type="number"
+                className="w-full p-1.5 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3 focus:ring-blue-50"
                 placeholder="Column number"
                 value={numCols}
                 onChange={(e) => setNumCols(e.target.value)}
-              ></textarea>
+              ></input>
             </div>
             <div className="lg:flex">
               <button
