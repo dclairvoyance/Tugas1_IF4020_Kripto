@@ -233,7 +233,7 @@ const Enigma = () => {
                   readOnly
                   id="output"
                   rows="2"
-                  className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
+                  className="w-full p-2 text-lg text-white bg-primary_2 rounded-md border border-primary_3"
                   value={fileOutput}
                 ></textarea>
                 <h2 className="mb-1 h-8 items-center ml-1 flex text-lg font-semibold text-white">
@@ -243,7 +243,7 @@ const Enigma = () => {
                   readOnly
                   id="outputBase64"
                   rows="2"
-                  className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
+                  className="w-full p-2 text-lg text-white bg-primary_2 rounded-md border border-primary_3"
                   value={userOutput}
                 ></textarea>
               </>
