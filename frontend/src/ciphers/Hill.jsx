@@ -38,7 +38,11 @@ const Hill = () => {
       });
       const data = await response.json();
       setUserOutput(data.message);
-      setOutputBase64(btoa(data.message));
+      if(data.message === "The matrix is not invertible"){
+        setOutputBase64("");
+      } else {
+        setOutputBase64(btoa(data.message));
+      }
     } catch (error) {
       console.error("Error: ", error);
       setUserOutput("Error encrypting message.");
@@ -61,7 +65,11 @@ const Hill = () => {
       });
       const data = await response.json();
       setUserOutput(data.message);
-      setOutputBase64(btoa(data.message));
+      if(data.message === "The matrix is not invertible"){
+        setOutputBase64("");
+      } else {
+        setOutputBase64(btoa(data.message));
+      }
     } catch (error) {
       console.error("Error: ", error);
       setUserOutput("Error encrypting message.");

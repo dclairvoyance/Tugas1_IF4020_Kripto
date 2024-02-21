@@ -51,7 +51,11 @@ const Affine = () => {
       });
       const data = await response.json();
       setUserOutput(data.message);
-      setOutputBase64(btoa(data.message));
+      if(data.message === "inverse number not found" || data.message === "A coefficient error"){
+        setOutputBase64("");
+      } else {
+        setOutputBase64(btoa(data.message));
+      }
     } catch (error) {
       console.error("Error: ", error);
       setUserOutput("Error encrypting message.");
@@ -69,7 +73,11 @@ const Affine = () => {
       });
       const data = await response.json();
       setUserOutput(data.message);
-      setOutputBase64(btoa(data.message));
+      if(data.message === "inverse number not found" || data.message === "A coefficient error"){
+        setOutputBase64("");
+      } else {
+        setOutputBase64(btoa(data.message));
+      }
     } catch (error) {
       console.error("Error: ", error);
       setUserOutput("Error encrypting message.");
