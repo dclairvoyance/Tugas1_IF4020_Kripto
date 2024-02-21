@@ -101,7 +101,7 @@ const Affine = () => {
         <div className="flex">
           {/* input */}
           <div className="basis-5/12 flex-col mx-1">
-            <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold text-white">
+            <h2 className="h-8 items-center ml-1 mb-4 flex text-lg font-semibold text-white">
               Input
             </h2>
             {/* text input */}
@@ -120,30 +120,30 @@ const Affine = () => {
 
           {/* key */}
           <div className="basis-2/12 flex-col mx-1">
-            <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold text-white">
+            <h2 className="h-8 items-center ml-1 mb-4 flex text-lg font-semibold text-white">
               Key
             </h2>
             <div className="md:flex mb-0.5">
               <div className="flex mb-1 md:w-1/2">
-                <p className="flex items-center ml-1 text-sm font-semibold text-left text-white">
+                <p className="flex items-center ml-1 text-lg font-semibold text-left text-white">
                   A:{" "}
                 </p>
                 <input
                   id="key"
                   type="number"
-                  className="w-20 ml-1 p-1.5 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3 focus:ring-blue-50"
+                  className="w-20 ml-1 p-1.5 text-lg text-white bg-primary_2 rounded-md border border-primary_3 focus:ring-blue-50"
                   value={aCoef}
                   onChange={(e) => setACoef(e.target.value)}
                 ></input>
               </div>
               <div className="flex mb-1 md:w-1/2">
-                <p className="flex items-center ml-1 text-sm font-semibold text-left text-white">
+                <p className="flex items-center ml-1 text-lg font-semibold text-left text-white">
                   B:{" "}
                 </p>
                 <input
                   id="key"
                   type="number"
-                  className="w-20 ml-1 p-1.5 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3 focus:ring-blue-50"
+                  className="w-20 ml-1 p-1.5 text-lg text-white bg-primary_2 rounded-md border border-primary_3 focus:ring-blue-50"
                   value={bCoef}
                   onChange={(e) => setBCoef(e.target.value)}
                 ></input>
@@ -170,7 +170,7 @@ const Affine = () => {
           {/* output */}
           <div className="basis-5/12 flex-col mx-1">
             <div className="md:flex md:justify-between mb-1">
-              <h2 className="h-8 items-center ml-1 flex text-md font-semibold text-white">
+              <h2 className="h-8 items-center ml-1 flex text-lg font-semibold text-white">
                 Output
               </h2>
               {/* download as txt file */}
@@ -184,17 +184,17 @@ const Affine = () => {
               id="output"
               ref={outputTextArea}
               rows="5"
-              className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
+              className="w-full p-2 text-lg text-white bg-primary_2 rounded-md border border-primary_3"
               value={userOutput}
             ></textarea>
-            <h2 className="mb-1 h-8 items-center ml-1 flex text-md font-semibold text-white">
+            <h2 className="mb-1 h-8 items-center ml-1 flex text-lg font-semibold text-white">
               Base64
             </h2>
             <textarea
               readOnly
               id="output"
               rows="5"
-              className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
+              className="w-full p-2 text-lg text-white bg-primary_2 rounded-md border border-primary_3"
               value={outputBase64}
             ></textarea>
           </div>

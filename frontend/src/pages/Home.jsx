@@ -2,12 +2,14 @@ const Home = () => {
   return (
     <>
       <div className="mx-auto text-gray-400">
-        <h1 className="text-3xl font-extrabold mb-3">Classic Ciphers</h1>
-        <div className="mb-8">
+        <h1 className="text-3xl font-extrabold mb-3 text-white">
+          Classic Ciphers
+        </h1>
+        <div className="mb-8 text-white">
           <h2>William Manuel Kurniawan (13520020)</h2>
           <h2>Damianus Clairvoyance Diva Putra (13520035)</h2>
         </div>
-        <table className="table-auto text-sm">
+        <table className="table-auto text-sm md:text-lg text-white">
           <thead>
             <tr className="border-b">
               <th className="pr-8">Ciphers</th>

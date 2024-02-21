@@ -135,7 +135,7 @@ const Hill = () => {
         <div className="flex">
           {/* input */}
           <div className="basis-5/12 flex-col mx-1">
-            <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold text-white">
+            <h2 className="h-8 items-center ml-1 mb-4 flex text-lg font-semibold text-white">
               Input
             </h2>
             {/* text input */}
@@ -154,15 +154,15 @@ const Hill = () => {
 
           {/* key */}
           <div className="basis-2/12 flex-col mx-1">
-            <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold text-white">
+            <h2 className="h-8 items-center ml-1 mb-4 flex text-lg font-semibold text-white">
               Key
             </h2>
             <div className="flex mb-2">
-              <p className="ml-1 text-sm font-semibold text-left text-white">
+              <p className="ml-1 text-lg font-semibold text-left text-white">
                 Key size:{" "}
               </p>
               <input
-                className="ml-1 text-sm text-center w-8 rounded-md border-r border-b"
+                className="ml-1 text-lg text-center w-8 rounded-md border-r border-b"
                 type="number"
                 min="2"
                 value={keySizeInput}
@@ -176,7 +176,7 @@ const Hill = () => {
                     <input
                       className={`${colIndex !== keySize - 1 ? "mr-1" : ""} ${
                         rowIndex !== keySize - 1 ? "mb-1" : ""
-                      } border-r border-b w-full text-center rounded-md`}
+                      } border-r border-b w-full text-center rounded-md text-lg`}
                       key={colIndex}
                       type="number"
                       step="1"
@@ -210,7 +210,7 @@ const Hill = () => {
           {/* output */}
           <div className="basis-5/12 flex-col mx-1">
             <div className="md:flex md:justify-between mb-1">
-              <h2 className="h-8 items-center ml-1 flex text-md font-semibold text-white">
+              <h2 className="h-8 items-center ml-1 flex text-lg font-semibold text-white">
                 Output
               </h2>
               {/* download as txt file */}
@@ -224,17 +224,17 @@ const Hill = () => {
               id="output"
               ref={outputTextArea}
               rows="5"
-              className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
+              className="w-full p-2 text-lg text-white bg-primary_2 rounded-md border border-primary_3"
               value={userOutput}
             ></textarea>
-            <h2 className="mb-1 h-8 items-center ml-1 flex text-md font-semibold text-white">
+            <h2 className="mb-1 h-8 items-center ml-1 flex text-lg font-semibold text-white">
               Base64
             </h2>
             <textarea
               readOnly
               id="output"
               rows="5"
-              className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
+              className="w-full p-2 text-lg text-white bg-primary_2 rounded-md border border-primary_3"
               value={outputBase64}
             ></textarea>
           </div>

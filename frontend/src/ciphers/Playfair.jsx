@@ -111,7 +111,7 @@ const Playfair = () => {
         <div className="flex">
           {/* input */}
           <div className="basis-5/12 flex-col mx-1">
-            <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold text-white">
+            <h2 className="h-8 items-center ml-1 mb-4 flex text-lg font-semibold text-white">
               Input
             </h2>
             {/* text input */}
@@ -130,13 +130,13 @@ const Playfair = () => {
 
           {/* key */}
           <div className="basis-2/12 flex-col mx-1">
-            <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold text-white">
+            <h2 className="h-8 items-center ml-1 mb-4 flex text-lg font-semibold text-white">
               Key
             </h2>
             <textarea
               id="key"
               rows="5"
-              className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3 focus:ring-blue-50"
+              className="w-full p-2 text-lg text-white bg-primary_2 rounded-md border border-primary_3 focus:ring-blue-50"
               placeholder="Write key here..."
               value={userKey}
               onChange={(e) => setUserKey(e.target.value)}
@@ -162,7 +162,7 @@ const Playfair = () => {
           {/* output */}
           <div className="basis-5/12 flex-col mx-1">
             <div className="md:flex md:justify-between mb-1">
-              <h2 className="h-8 items-center ml-1 flex text-md font-semibold text-white">
+              <h2 className="h-8 items-center ml-1 flex text-lg font-semibold text-white">
                 Output
               </h2>
               {/* download as txt file */}
@@ -175,17 +175,17 @@ const Playfair = () => {
               readOnly
               id="output"
               rows="5"
-              className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
+              className="w-full p-2 text-lg text-white bg-primary_2 rounded-md border border-primary_3"
               value={userOutput}
             ></textarea>
-            <h2 className="mb-1 h-8 items-center ml-1 flex text-md font-semibold text-white">
+            <h2 className="mb-1 h-8 items-center ml-1 flex text-lg font-semibold text-white">
               Base64
             </h2>
             <textarea
               readOnly
               id="output"
               rows="5"
-              className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
+              className="w-full p-2 text-lg text-white bg-primary_2 rounded-md border border-primary_3"
               value={outputBase64}
             ></textarea>
           </div>

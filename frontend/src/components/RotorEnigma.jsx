@@ -17,14 +17,14 @@ const RotorEnigma = ({ index, rotorSettings, handleOnChangeParent }) => {
     <div className="w-full bg-primary_2 rounded-md mr-1 border border-primary_3">
       <div className="flex justify-center cursor-pointer">
         <MdKeyboardArrowUp
-          color="#9ca3af"
+          color="white"
           onClick={() => handleRotorChange(-1)}
         />
       </div>
-      <div className="text-gray-400">{rotorSettings}</div>
+      <div className="text-white text-lg">{rotorSettings}</div>
       <div className="flex justify-center cursor-pointer">
         <MdKeyboardArrowDown
-          color="#9ca3af"
+          color="white"
           onClick={() => handleRotorChange(1)}
         />
       </div>

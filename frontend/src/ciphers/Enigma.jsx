@@ -151,7 +151,7 @@ const Enigma = () => {
         <div className="flex">
           {/* input */}
           <div className="basis-5/12 flex-col mx-1">
-            <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold text-white">
+            <h2 className="h-8 items-center ml-1 mb-4 flex text-lg font-semibold text-white">
               Input
             </h2>
             {/* text input */}
@@ -178,7 +178,7 @@ const Enigma = () => {
 
           {/* key */}
           <div className="basis-2/12 flex-col mx-1">
-            <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold text-white">
+            <h2 className="h-8 items-center ml-1 mb-4 flex text-lg font-semibold text-white">
               Key
             </h2>
             <div className="flex mb-2">
@@ -217,7 +217,7 @@ const Enigma = () => {
           {/* output */}
           <div className="basis-5/12 flex-col mx-1">
             <div className="md:flex md:justify-between mb-1">
-              <h2 className="h-8 items-center ml-1 flex text-md font-semibold text-white">
+              <h2 className="h-8 items-center ml-1 flex text-lg font-semibold text-white">
                 Output
               </h2>
               {/* download as txt file */}
@@ -236,7 +236,7 @@ const Enigma = () => {
                   className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
                   value={fileOutput}
                 ></textarea>
-                <h2 className="mb-1 h-8 items-center ml-1 flex text-md font-semibold text-white">
+                <h2 className="mb-1 h-8 items-center ml-1 flex text-lg font-semibold text-white">
                   Base64
                 </h2>
                 <textarea
@@ -254,17 +254,17 @@ const Enigma = () => {
                   readOnly
                   id="output"
                   rows="5"
-                  className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
+                  className="w-full p-2 text-lg text-white bg-primary_2 rounded-md border border-primary_3"
                   value={fileOutput}
                 ></textarea>
-                <h2 className="mb-1 h-8 items-center ml-1 flex text-md font-semibold text-white">
+                <h2 className="mb-1 h-8 items-center ml-1 flex text-lg font-semibold text-white">
                   Base64
                 </h2>
                 <textarea
                   readOnly
                   id="outputBase64"
                   rows="5"
-                  className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
+                  className="w-full p-2 text-lg text-white bg-primary_2 rounded-md border border-primary_3"
                   value={userOutput}
                 ></textarea>
               </>

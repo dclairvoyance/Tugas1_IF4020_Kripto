@@ -17,8 +17,8 @@ const Keyboard = ({ active, handleOnClickParent }) => {
               className={`${
                 active === char
                   ? "bg-secondary text-black"
-                  : "bg-primary_2 text-gray-400"
-              } md:w-6 rounded-md border border-primary_3`}
+                  : "bg-primary_2 text-white"
+              } md:w-6 rounded-md border border-primary_3 text-lg`}
               onClick={() => handleOnClickParent(char)}
             >
               {char}
