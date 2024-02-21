@@ -171,7 +171,16 @@ const Superencrypt = () => {
 
   const handleFileOutputSubmit = () => {
     const element = document.createElement("a");
-    element.href = fileURL;
+    const file = new Blob([outputTextArea.current.value], {
+      type: "text/plain",
+    });
+
+    if (format === "file") {
+      element.href = fileURL;
+    } else {
+      element.href = URL.createObjectURL(file);
+    }
+
     element.download = fileOutputName ? fileOutputName : "encrypted";
     document.body.appendChild(element); // Firefox
     element.click();
@@ -277,7 +286,6 @@ const Superencrypt = () => {
             <textarea
               readOnly
               id="output"
-              ref={outputTextArea}
               rows="5"
               className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
               value={outputBase64}

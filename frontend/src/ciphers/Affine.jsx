@@ -193,7 +193,6 @@ const Affine = () => {
             <textarea
               readOnly
               id="output"
-              ref={outputTextArea}
               rows="5"
               className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
               value={outputBase64}
