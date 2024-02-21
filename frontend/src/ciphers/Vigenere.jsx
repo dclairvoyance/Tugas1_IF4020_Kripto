@@ -104,12 +104,12 @@ const Vigenere = () => {
       const url = window.URL.createObjectURL(blob);
       setFileURL(url);
 
-      const reader = new FileReader()
-      reader.onload = function(event) {
+      const reader = new FileReader();
+      reader.onload = function(event) {               
         setUserOutput(event.target.result);
       };
-
-      reader.readAsText(blob);
+      
+      reader.readAsText(blob, 'ASCII');
     } catch (error) {
       console.error('Error:', error);
       setUserOutput('Error encrypting message.');
@@ -198,12 +198,12 @@ const Vigenere = () => {
       const url = window.URL.createObjectURL(blob);
       setFileURL(url);
 
-      const reader = new FileReader()
-      reader.onload = function(event) {
+      const reader = new FileReader();
+      reader.onload = function(event) {               
         setUserOutput(event.target.result);
       };
-
-      reader.readAsText(blob)
+      
+      reader.readAsText(blob, 'ASCII');
     } catch (error) {
       console.error('Error:', error);
       setUserOutput('Error decrypting message.');
@@ -253,7 +253,7 @@ const Vigenere = () => {
     } else {
       element.href = URL.createObjectURL(file);
     }
-    
+
     element.download = fileOutputName ? fileOutputName : "encrypted";
     document.body.appendChild(element); // Firefox
     element.click();

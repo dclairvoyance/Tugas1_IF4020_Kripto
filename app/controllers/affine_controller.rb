@@ -30,6 +30,9 @@ class AffineController < ApplicationController
 
     message = ""
     a_inverse = calc_inverse(a_coef)
+    if(a_inverse == nil)
+      return render json: { message: "inverse number not found" }
+    end
   
     user_input.each_char do |char|
       decrypted_value = (a_inverse * ((char.ord - 'A'.ord) - b_coef)) % 26
