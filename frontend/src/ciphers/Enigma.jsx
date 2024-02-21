@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { MdLockOutline } from "react-icons/md";
 import Subpage from "../components/Subpage";
 import TextInput from "../components/TextInput";
@@ -12,8 +12,8 @@ const Enigma = () => {
   const [fileInputName, setFileInputName] = useState("");
   const [fileOutputName, setFileOutputName] = useState("");
   const [userInput, setUserInput] = useState("");
-  const [userOutput, setUserOutput] = useState("");
-  const outputTextArea = useRef(null);
+  const [userOutput, setUserOutput] = useState(""); // base64
+  const [fileOutput, setFileOutput] = useState(""); // 26-alphabet
 
   /* specific Enigma: rotors */
   const [rotorsSettings, setRotorsSettings] = useState(["E", "N", "G", "M"]);
@@ -23,6 +23,7 @@ const Enigma = () => {
   useEffect(() => {
     if (userInputChar !== "") {
       enigmaSendMessage();
+      setUserInputChar("");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userInputChar]);
@@ -46,10 +47,13 @@ const Enigma = () => {
       const data = await response.json();
       if (format === "keyboard") {
         setUserOutputChar(data.message);
-        let newUserOutput = userOutput;
-        setUserOutput((newUserOutput += data.message));
+        let newUserOutput = fileOutput;
+        newUserOutput += data.message;
+        setUserOutput(btoa(newUserOutput));
+        setFileOutput(newUserOutput);
       } else {
-        setUserOutput(data.message);
+        setUserOutput(btoa(data.message));
+        setFileOutput(data.message);
       }
       handleRotorsRotate(data.next_key);
     } catch (error) {
@@ -65,6 +69,7 @@ const Enigma = () => {
     setFormat(format);
     setUserInput("");
     setUserOutput("");
+    setFileOutput("");
     setFileInputName("No file uploaded...");
   };
 
@@ -87,7 +92,7 @@ const Enigma = () => {
   };
   const handleFileOutputSubmit = () => {
     const element = document.createElement("a");
-    const file = new Blob([outputTextArea.current.value], {
+    const file = new Blob([fileOutput], {
       type: "text/plain",
     });
     element.href = URL.createObjectURL(file);
@@ -221,14 +226,23 @@ const Enigma = () => {
               />
             </div>
             {format === "keyboard" && <Keyboard active={userOutputChar} />}
-            <textarea
-              readOnly
-              id="output"
-              ref={outputTextArea}
-              rows="10"
-              className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
-              value={userOutput}
-            ></textarea>
+            {format === "keyboard" && (
+              <textarea
+                readOnly
+                id="output"
+                className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
+                value={userOutput}
+              ></textarea>
+            )}
+            {(format === "text" || format === "file") && (
+              <textarea
+                readOnly
+                id="output"
+                rows="10"
+                className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
+                value={userOutput}
+              ></textarea>
+            )}
           </div>
         </div>
       </div>
