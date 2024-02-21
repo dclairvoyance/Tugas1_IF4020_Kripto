@@ -26,14 +26,11 @@ const Vigenere = () => {
   const encryptAction = async () => {
     if (variant === "standard") {
       await vigenereEncryptMessage();
-    }
-    else if (variant === "autokey") {
+    } else if (variant === "autokey") {
       await vigenereAutoEncryptMessage();
-    }
-    else if (variant === "extended" && format === "text") {
+    } else if (variant === "extended" && format === "text") {
       await extendedVigenereEncryptMessage();
-    }
-    else if (variant === "extended" && format === "file") {
+    } else if (variant === "extended" && format === "file") {
       await extendedVigenereFileEncryptMessage();
     }
   };
@@ -58,87 +55,93 @@ const Vigenere = () => {
 
   const vigenereAutoEncryptMessage = async () => {
     try {
-      const response = await fetch('http://localhost:3001/vigenere_auto_encrypt', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ userInput, userKey }),
-      });
+      const response = await fetch(
+        "http://localhost:3001/vigenere_auto_encrypt",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ userInput, userKey }),
+        }
+      );
       const data = await response.json();
       setUserOutput(data.message);
       setOutputBase64(btoa(data.message));
     } catch (error) {
-      console.error('Error:', error);
-      setUserOutput('Error encrypting message.');
+      console.error("Error:", error);
+      setUserOutput("Error encrypting message.");
     }
   };
 
   const extendedVigenereEncryptMessage = async () => {
     try {
-      const response = await fetch('http://localhost:3001/extended_vigenere_encrypt', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ userInput, userKey }),
-      });
+      const response = await fetch(
+        "http://localhost:3001/extended_vigenere_encrypt",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ userInput, userKey }),
+        }
+      );
       const data = await response.json();
-      const decoded_data = atob(data.message)
+      const decoded_data = atob(data.message);
       setUserOutput(decoded_data);
       setOutputBase64(data.message);
     } catch (error) {
-      console.error('Error:', error);
-      setUserOutput('Error encrypting message.');
+      console.error("Error:", error);
+      setUserOutput("Error encrypting message.");
     }
   };
 
   const extendedVigenereFileEncryptMessage = async () => {
     try {
       const formData = new FormData();
-      formData.append('file', fileInput);
-      formData.append('userKey', userKey);
+      formData.append("file", fileInput);
+      formData.append("userKey", userKey);
 
-      const response = await fetch('http://localhost:3001/extended_vigenere_file_encrypt', {
-        method: 'POST',
-        body: formData
-      });
+      const response = await fetch(
+        "http://localhost:3001/extended_vigenere_file_encrypt",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       setFileURL(url);
 
       const reader = new FileReader();
-      reader.onload = function(event) {               
+      reader.onload = function (event) {
         setUserOutput(event.target.result);
       };
-      
-      reader.readAsText(blob, 'ASCII');
+
+      reader.readAsText(blob, "ASCII");
 
       const reader2 = new FileReader();
-      reader2.onload = function(event) {   
-        const base64Data = event.target.result.split(',')[1];            
+      reader2.onload = function (event) {
+        const base64Data = event.target.result.split(",")[1];
         setOutputBase64(base64Data);
       };
-      
-      reader2.readAsDataURL(blob)
+
+      reader2.readAsDataURL(blob);
     } catch (error) {
-      console.error('Error:', error);
-      setUserOutput('Error encrypting message.');
+      console.error("Error:", error);
+      setUserOutput("Error encrypting message.");
     }
   };
 
   const decryptAction = async () => {
     if (variant === "standard") {
       await vigenereDecryptMessage();
-    }
-    else if (variant === "autokey") {
+    } else if (variant === "autokey") {
       await vigenereAutoDecryptMessage();
-    }
-    else if (variant === "extended" && format === "text") {
+    } else if (variant === "extended" && format === "text") {
       await extendedVigenereDecryptMessage();
-    }
-    else if (variant === "extended" && format === "file") {
+    } else if (variant === "extended" && format === "file") {
       await extendedVigenereFileDecryptMessage();
     }
   };
@@ -163,73 +166,82 @@ const Vigenere = () => {
 
   const vigenereAutoDecryptMessage = async () => {
     try {
-      const response = await fetch('http://localhost:3001/vigenere_auto_decrypt', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ userInput, userKey }),
-      });
+      const response = await fetch(
+        "http://localhost:3001/vigenere_auto_decrypt",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ userInput, userKey }),
+        }
+      );
       const data = await response.json();
       setUserOutput(data.message);
       setOutputBase64(btoa(data.message));
     } catch (error) {
-      console.error('Error:', error);
-      setUserOutput('Error encrypting message.');
+      console.error("Error:", error);
+      setUserOutput("Error encrypting message.");
     }
   };
 
   const extendedVigenereDecryptMessage = async () => {
     try {
-      const response = await fetch('http://localhost:3001/extended_vigenere_decrypt', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ userInput, userKey }),
-      });
+      const response = await fetch(
+        "http://localhost:3001/extended_vigenere_decrypt",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ userInput, userKey }),
+        }
+      );
       const data = await response.json();
-      const decoded_data = atob(data.message)
+      const decoded_data = atob(data.message);
       setUserOutput(decoded_data);
       setOutputBase64(data.message);
     } catch (error) {
-      console.error('Error:', error);
-      setUserOutput('Error decrypting message.');
+      console.error("Error:", error);
+      setUserOutput("Error decrypting message.");
     }
   };
 
   const extendedVigenereFileDecryptMessage = async () => {
     try {
       const formData = new FormData();
-      formData.append('file', fileInput);
-      formData.append('userKey', userKey);
+      formData.append("file", fileInput);
+      formData.append("userKey", userKey);
 
-      const response = await fetch('http://localhost:3001/extended_vigenere_file_decrypt', {
-        method: 'POST',
-        body: formData,
-      });
+      const response = await fetch(
+        "http://localhost:3001/extended_vigenere_file_decrypt",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       setFileURL(url);
 
       const reader = new FileReader();
-      reader.onload = function(event) {               
+      reader.onload = function (event) {
         setUserOutput(event.target.result);
       };
-      
-      reader.readAsText(blob, 'ASCII');
+
+      reader.readAsText(blob, "ASCII");
 
       const reader2 = new FileReader();
-      reader2.onload = function(event) {   
-        const base64Data = event.target.result.split(',')[1];            
+      reader2.onload = function (event) {
+        const base64Data = event.target.result.split(",")[1];
         setOutputBase64(base64Data);
       };
-      
-      reader2.readAsDataURL(blob)
+
+      reader2.readAsDataURL(blob);
     } catch (error) {
-      console.error('Error:', error);
-      setUserOutput('Error decrypting message.');
+      console.error("Error:", error);
+      setUserOutput("Error decrypting message.");
     }
   };
 
@@ -272,7 +284,7 @@ const Vigenere = () => {
     });
 
     if (variant === "extended" && format === "file") {
-      element.href = fileURL
+      element.href = fileURL;
     } else {
       element.href = URL.createObjectURL(file);
     }
@@ -371,7 +383,7 @@ const Vigenere = () => {
               className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
               value={userOutput}
             ></textarea>
-            <h2 className="h-8 items-center ml-1 flex text-md font-semibold text-white">
+            <h2 className="mb-1 h-8 items-center ml-1 flex text-md font-semibold text-white">
               Base64
             </h2>
             <textarea

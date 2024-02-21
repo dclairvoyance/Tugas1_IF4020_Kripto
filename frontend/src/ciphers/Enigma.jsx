@@ -225,23 +225,48 @@ const Enigma = () => {
                 handleOnSubmitParent={handleFileOutputSubmit}
               />
             </div>
-            {format === "keyboard" && <Keyboard active={userOutputChar} />}
             {format === "keyboard" && (
-              <textarea
-                readOnly
-                id="output"
-                className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
-                value={userOutput}
-              ></textarea>
+              <>
+                <Keyboard active={userOutputChar} />
+                <textarea
+                  readOnly
+                  id="output"
+                  rows="2"
+                  className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
+                  value={fileOutput}
+                ></textarea>
+                <h2 className="mb-1 h-8 items-center ml-1 flex text-md font-semibold text-white">
+                  Base64
+                </h2>
+                <textarea
+                  readOnly
+                  id="outputBase64"
+                  rows="2"
+                  className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
+                  value={userOutput}
+                ></textarea>
+              </>
             )}
             {(format === "text" || format === "file") && (
-              <textarea
-                readOnly
-                id="output"
-                rows="10"
-                className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
-                value={userOutput}
-              ></textarea>
+              <>
+                <textarea
+                  readOnly
+                  id="output"
+                  rows="5"
+                  className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
+                  value={fileOutput}
+                ></textarea>
+                <h2 className="mb-1 h-8 items-center ml-1 flex text-md font-semibold text-white">
+                  Base64
+                </h2>
+                <textarea
+                  readOnly
+                  id="outputBase64"
+                  rows="5"
+                  className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
+                  value={userOutput}
+                ></textarea>
+              </>
             )}
           </div>
         </div>

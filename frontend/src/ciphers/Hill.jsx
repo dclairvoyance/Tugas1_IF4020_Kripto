@@ -86,7 +86,7 @@ const Hill = () => {
     reader.onload = (e) => {
       setUserInput(e.target.result);
     };
-    
+
     reader.readAsText(file);
   };
 
@@ -227,7 +227,7 @@ const Hill = () => {
               className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
               value={userOutput}
             ></textarea>
-            <h2 className="h-8 items-center ml-1 flex text-md font-semibold text-white">
+            <h2 className="mb-1 h-8 items-center ml-1 flex text-md font-semibold text-white">
               Base64
             </h2>
             <textarea

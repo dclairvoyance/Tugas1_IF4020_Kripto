@@ -87,20 +87,19 @@ const Superencrypt = () => {
       setFileURL(url);
 
       const reader = new FileReader();
-      reader.onload = function(event) {               
+      reader.onload = function (event) {
         setUserOutput(event.target.result);
       };
-      
-      reader.readAsText(blob, 'ASCII');
+
+      reader.readAsText(blob, "ASCII");
 
       const reader2 = new FileReader();
-      reader2.onload = function(event) {   
-        const base64Data = event.target.result.split(',')[1];            
+      reader2.onload = function (event) {
+        const base64Data = event.target.result.split(",")[1];
         setOutputBase64(base64Data);
       };
-      
-      reader2.readAsDataURL(blob)
 
+      reader2.readAsDataURL(blob);
     } catch (error) {
       console.error("Error:", error);
       setUserOutput("Error downloading file.");
@@ -151,20 +150,19 @@ const Superencrypt = () => {
       setFileURL(url);
 
       const reader = new FileReader();
-      reader.onload = function(event) {               
+      reader.onload = function (event) {
         setUserOutput(event.target.result);
       };
-      
-      reader.readAsText(blob, 'ASCII');
+
+      reader.readAsText(blob, "ASCII");
 
       const reader2 = new FileReader();
-      reader2.onload = function(event) {   
-        const base64Data = event.target.result.split(',')[1];            
+      reader2.onload = function (event) {
+        const base64Data = event.target.result.split(",")[1];
         setOutputBase64(base64Data);
       };
-      
-      reader2.readAsDataURL(blob)
 
+      reader2.readAsDataURL(blob);
     } catch (error) {
       console.error("Error:", error);
       setUserOutput("Error downloading file.");
@@ -212,7 +210,7 @@ const Superencrypt = () => {
 
           {/* key */}
           <div className="basis-2/12 flex-col mx-1">
-            <h2 className="h-8 items-center ml-1 mb-1 flex text-md font-semibold text-white">
+            <h2 className="mb-1 h-8 items-center ml-1 mb-1 flex text-md font-semibold text-white">
               Key
             </h2>
             <div className="flex-col mx-1 mb-3">
