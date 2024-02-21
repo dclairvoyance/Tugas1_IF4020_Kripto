@@ -68,6 +68,7 @@ const Enigma = () => {
   const handleFormat = (format) => {
     setFormat(format);
     setUserInput("");
+    setUserInputChar("");
     setUserOutput("");
     setFileOutput("");
     setFileInputName("No file uploaded...");
@@ -161,7 +162,7 @@ const Enigma = () => {
             {/* keyboard input */}
             {format === "keyboard" && (
               <Keyboard
-                active={userInputChar}
+                active={userInput[userInput.length - 1]}
                 handleOnClickParent={handleUserInputChar}
               />
             )}
