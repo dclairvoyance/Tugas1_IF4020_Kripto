@@ -14,6 +14,7 @@ const Vigenere = () => {
   const [fileURL, setFileURL] = useState(null);
   const [userInput, setUserInput] = useState("");
   const [userOutput, setUserOutput] = useState("");
+  const [outputBase64, setOutputBase64] = useState("");
   const outputTextArea = useRef(null);
 
   /* specific Vigenere: key */
@@ -48,6 +49,7 @@ const Vigenere = () => {
       });
       const data = await response.json();
       setUserOutput(data.message);
+      setOutputBase64(btoa(data.message));
     } catch (error) {
       console.error("Error: ", error);
       setUserOutput("Error encrypting message.");
@@ -65,6 +67,7 @@ const Vigenere = () => {
       });
       const data = await response.json();
       setUserOutput(data.message);
+      setOutputBase64(btoa(data.message));
     } catch (error) {
       console.error('Error:', error);
       setUserOutput('Error encrypting message.');
@@ -83,6 +86,7 @@ const Vigenere = () => {
       const data = await response.json();
       const decoded_data = atob(data.message)
       setUserOutput(decoded_data);
+      setOutputBase64(data.message);
     } catch (error) {
       console.error('Error:', error);
       setUserOutput('Error encrypting message.');
@@ -110,6 +114,14 @@ const Vigenere = () => {
       };
       
       reader.readAsText(blob, 'ASCII');
+
+      const reader2 = new FileReader();
+      reader2.onload = function(event) {   
+        const base64Data = event.target.result.split(',')[1];            
+        setOutputBase64(base64Data);
+      };
+      
+      reader2.readAsDataURL(blob)
     } catch (error) {
       console.error('Error:', error);
       setUserOutput('Error encrypting message.');
@@ -142,6 +154,7 @@ const Vigenere = () => {
       });
       const data = await response.json();
       setUserOutput(data.message);
+      setOutputBase64(btoa(data.message));
     } catch (error) {
       console.error("Error: ", error);
       setUserOutput("Error decrypting message.");
@@ -159,6 +172,7 @@ const Vigenere = () => {
       });
       const data = await response.json();
       setUserOutput(data.message);
+      setOutputBase64(btoa(data.message));
     } catch (error) {
       console.error('Error:', error);
       setUserOutput('Error encrypting message.');
@@ -177,6 +191,7 @@ const Vigenere = () => {
       const data = await response.json();
       const decoded_data = atob(data.message)
       setUserOutput(decoded_data);
+      setOutputBase64(data.message);
     } catch (error) {
       console.error('Error:', error);
       setUserOutput('Error decrypting message.');
@@ -204,6 +219,14 @@ const Vigenere = () => {
       };
       
       reader.readAsText(blob, 'ASCII');
+
+      const reader2 = new FileReader();
+      reader2.onload = function(event) {   
+        const base64Data = event.target.result.split(',')[1];            
+        setOutputBase64(base64Data);
+      };
+      
+      reader2.readAsDataURL(blob)
     } catch (error) {
       console.error('Error:', error);
       setUserOutput('Error decrypting message.');
@@ -344,9 +367,20 @@ const Vigenere = () => {
               readOnly
               id="output"
               ref={outputTextArea}
-              rows="10"
+              rows="5"
               className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
               value={userOutput}
+            ></textarea>
+            <h2 className="h-8 items-center ml-1 flex text-md font-semibold text-white">
+              Base64
+            </h2>
+            <textarea
+              readOnly
+              id="output"
+              ref={outputTextArea}
+              rows="5"
+              className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
+              value={outputBase64}
             ></textarea>
           </div>
         </div>

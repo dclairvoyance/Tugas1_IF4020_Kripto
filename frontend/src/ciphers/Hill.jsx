@@ -12,6 +12,7 @@ const Hill = () => {
   const [userInput, setUserInput] = useState("");
   const [keyValues, setKeyValues] = useState([]);
   const [userOutput, setUserOutput] = useState("");
+  const [outputBase64, setOutputBase64] = useState("");
   const outputTextArea = useRef(null);
 
   /* specific Hill: matrix key */
@@ -37,6 +38,7 @@ const Hill = () => {
       });
       const data = await response.json();
       setUserOutput(data.message);
+      setOutputBase64(btoa(data.message));
     } catch (error) {
       console.error("Error: ", error);
       setUserOutput("Error encrypting message.");
@@ -59,6 +61,7 @@ const Hill = () => {
       });
       const data = await response.json();
       setUserOutput(data.message);
+      setOutputBase64(btoa(data.message));
     } catch (error) {
       console.error("Error: ", error);
       setUserOutput("Error encrypting message.");
@@ -220,9 +223,20 @@ const Hill = () => {
               readOnly
               id="output"
               ref={outputTextArea}
-              rows="10"
+              rows="5"
               className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
               value={userOutput}
+            ></textarea>
+            <h2 className="h-8 items-center ml-1 flex text-md font-semibold text-white">
+              Base64
+            </h2>
+            <textarea
+              readOnly
+              id="output"
+              ref={outputTextArea}
+              rows="5"
+              className="w-full p-2 text-sm text-gray-400 bg-primary_2 rounded-md border border-primary_3"
+              value={outputBase64}
             ></textarea>
           </div>
         </div>
